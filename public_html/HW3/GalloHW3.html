@@ -8,16 +8,31 @@
         window.addEventListener("load", () => {
             console.log("loaded via javascript");
             //TODO: add any extra onload processing you may need here
-    
+    document.addEventListener('click',getCurrentSelection);
         });
 
 
         function getCurrentSelection() {
             setTimeout(() => {
                 //added this delay here as some solutions may require it to update properly (i.e., click code may complete before the navigation changes)
-                //TODO: add code for processing the current selection 
-           document.getElementsByTagName('a').addEventListener('click',updateCurrentPage())
-         
+                //TODO: add code for processing the current selection
+                var websites = [
+    "<a href='#login'>login</a>",
+    "<a href='#register'>register</a>",
+    "<a href='#profile'>profile</a>",
+    "<a href='#logout'>logout</a>"
+];
+var h1tag =  document.getElementsByTagName('a');
+                for(var i = 0; i <websites.length-1;i++)
+                {
+                    h1tag[i].innerText;
+                }
+                
+                
+                updateCurrentPage(h1tag);
+
+                
+           //updateCurrentPage(document.getElementsByTagName('a').innerText );
 
                 //Note: likely you'll want to call updateCurrentPage towards the end
                
