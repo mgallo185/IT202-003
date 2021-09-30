@@ -8,17 +8,20 @@
         window.addEventListener("load", () => {
             console.log("loaded via javascript");
             //TODO: add any extra onload processing you may need here
-            var title = document.querySelectorAll("title");
-            var h1 = document.querySelectorAll("h1");
-            
+    
         });
+
+
         function getCurrentSelection() {
             setTimeout(() => {
                 //added this delay here as some solutions may require it to update properly (i.e., click code may complete before the navigation changes)
                 //TODO: add code for processing the current selection 
-                document.querySelectorAll("h1").innerHTML = "changed"
+           document.getElementsByTagName('a').addEventListener('click',updateCurrentPage())
+         
+
                 //Note: likely you'll want to call updateCurrentPage towards the end
-               updateCurrentPage(title);
+               
+               
             }, 100);
         }
     </script>
@@ -29,13 +32,13 @@
     list-style-type: none;
 }
 
- li ul  :before
+  li  ul :before
 {
     content:'✓';
 }
 
 
-/* my choice: change letters to h2 to a cool font */
+/* my choice: change letters to h2 and h3 to a cool font */
 h2{
     font-style: oblique;
      font-variant:small-caps ;
@@ -73,7 +76,7 @@ h3{
             text-transform: capitalize;
         }
 
-
+/* nav bacground and horizontal*/
  nav {
     margin: 0;
 	padding: 20px 0;
