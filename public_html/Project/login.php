@@ -32,11 +32,12 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         array_push($errors, "Email must be set");
     }
     //sanitize
-    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    //$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+    sanitize_email();
+    is_valid_email();
     //validate
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        array_push($errors, "Invalid email address");
-    }
+    //if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    
     if (empty($password)) {
         array_push($errors, "Password must be set");
     }
