@@ -103,8 +103,8 @@ function menu() {
   context.fillText('Shoot \'Em!', canvas.width / 2, canvas.height / 4);
   context.font = '24px Arial';
   context.fillText('Click to Start', canvas.width / 2, canvas.height / 2);
-  context.font = '18px Arial';
-  context.fillText('Up/Down/Left/Right to move, Space to shoot.', canvas.width / 2, (canvas.height / 4) * 3);
+  context.font = '14px Arial';
+  context.fillText('Up/Down/Left/Right to move, W/S/A/D to change direction of bullet, Space to shoot.', canvas.width / 2, (canvas.height / 4) * 3);
   // Start the game on a click
   canvas.addEventListener('click', startGame);
 }
@@ -152,20 +152,6 @@ canvas.addEventListener('keydown', function(event) {
   if (event.keyCode === 37) { // left
     left = true;
   }
-  if (event.keyCode === 87) { // rotate up
-    rotateup = true;
-  }
-  if (event.keyCode === 83) { // rotate down
-    rotatedown = true;
-  }
-
-  if (event.keyCode === 65) { // rotate left
-    rotateleft = true;
-  }
-
-  if (event.keyCode === 68) { // rotate right
-    rotateright = true;
-  }
 
 
 });
@@ -185,20 +171,32 @@ canvas.addEventListener('keyup', function(event) {
   if (event.keyCode === 37) { // left
     left = false;
   }
- // if (event.keyCode === 87) { // rotate up
-//    rotateup = false;
- // }
-  //if (event.keyCode === 83) { // rotate down
-   // rotatedown = false;
- // }
+  if (event.keyCode === 87) { // rotate up
+   rotateup = true;
+   rotatedown = false;
+   rotateleft = false;
+   rotateright = false;
+  }
+  if (event.keyCode === 83) { // rotate down
+    rotatedown = true;
+    rotateup = false;
+  rotateleft = false;
+   rotateright = false;
+  }
 
- // if (event.keyCode === 65) { // rotate left
- //   rotateleft = false;
- // }
+ if (event.keyCode === 65) { // rotate left
+    rotateleft = true;
+    rotateright = false
+    rotateup = false;
+   rotatedown = false;
+  }
 
-  //if (event.keyCode === 68) { // rotate right
-  //  rotateright = false;
- // }
+  if (event.keyCode === 68) { // rotate right
+    rotateright = true;
+    rotateleft = false;
+    rotateup = false;
+   rotatedown = false;
+  }
 });
 
 // Clear the canvas
@@ -272,10 +270,6 @@ function draw() {
     ship.x = canvas.width - ship.l;
   }
 
-  //adding more lives for every 10 points
-  if(score%10 ==0 && score > 0 ){
-      lives = lives + 1;
-    }
   // Draw the ship
   context.fillStyle = '#FF0000';
   ship.draw();
@@ -287,15 +281,19 @@ function draw() {
 
   if( rotateup){
     bullet.y -= bullet.s;
+    rotatedown = false;
   } else
   if (rotateright){
     bullet.x += bullet.s;
+    rotateleft = false;
   } else
   if( rotatedown){
     bullet.y += bullet.s;
+    rotateup = false;
   } else
   if (rotateleft){
     bullet.x -= bullet.s;
+    rotateright = false;
   } else
   bullet.x += bullet.s;
 
@@ -315,6 +313,10 @@ function draw() {
         } else if (score % 5 === 0) {
           enemyBaseSpeed += 1;
         }
+         //adding more lives for every 10 points
+   if(score%10 ==0 && score > 0 ){
+      lives = lives + 1;
+    }
       }
     });
     
@@ -326,6 +328,7 @@ function draw() {
     context.fillStyle = '#0000FF';
     bullet.draw();
   }
+
   // Draw the score and lives 
   context.fillStyle = '#000000';
   context.font = '24px Arial';
