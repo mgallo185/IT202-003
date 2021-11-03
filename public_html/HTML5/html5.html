@@ -45,6 +45,12 @@ var ship = makeSquare(50, canvas.height / 2 - 25, 50, 5);
 var up = false;
 var down = false;
 var space = false;
+var right = false;
+var left = false;
+var rotateup = false;
+var rotatedown = false;
+var rotateleft = false;
+var rotateright = false
 
 // Is a bullet already on the canvas?
 var shooting = false;
@@ -82,6 +88,7 @@ function isColliding(a, b) {
 
 // Track the user's score
 var score = 0;
+var lives = 3;
 // The delay between enemies (in milliseconds)
 var timeBetweenEnemies = 5 * 1000;
 // ID to track the spawn timeout
@@ -97,7 +104,7 @@ function menu() {
   context.font = '24px Arial';
   context.fillText('Click to Start', canvas.width / 2, canvas.height / 2);
   context.font = '18px Arial';
-  context.fillText('Up/Down to move, Space to shoot.', canvas.width / 2, (canvas.height / 4) * 3);
+  context.fillText('Up/Down/Left/Right to move, Space to shoot.', canvas.width / 2, (canvas.height / 4) * 3);
   // Start the game on a click
   canvas.addEventListener('click', startGame);
 }
@@ -131,6 +138,7 @@ canvas.addEventListener('keydown', function(event) {
   event.preventDefault();
   if (event.keyCode === 38) { // UP
     up = true;
+
   }
   if (event.keyCode === 40) { // DOWN
     down = true;
@@ -138,6 +146,28 @@ canvas.addEventListener('keydown', function(event) {
   if (event.keyCode === 32) { // SPACE
     shoot();
   }
+  if (event.keyCode === 39) { // right
+    right = true;
+  }
+  if (event.keyCode === 37) { // left
+    left = true;
+  }
+  if (event.keyCode === 87) { // rotate up
+    rotateup = true;
+  }
+  if (event.keyCode === 83) { // rotate down
+    rotatedown = true;
+  }
+
+  if (event.keyCode === 65) { // rotate left
+    rotateleft = true;
+  }
+
+  if (event.keyCode === 68) { // rotate right
+    rotateright = true;
+  }
+
+
 });
 
 // Listen for keyup events
@@ -149,6 +179,26 @@ canvas.addEventListener('keyup', function(event) {
   if (event.keyCode === 40) { // DOWN
     down = false;
   }
+  if (event.keyCode === 39) { // right
+    right = false;
+  }
+  if (event.keyCode === 37) { // left
+    left = false;
+  }
+ // if (event.keyCode === 87) { // rotate up
+//    rotateup = false;
+ // }
+  //if (event.keyCode === 83) { // rotate down
+   // rotatedown = false;
+ // }
+
+ // if (event.keyCode === 65) { // rotate left
+ //   rotateleft = false;
+ // }
+
+  //if (event.keyCode === 68) { // rotate right
+  //  rotateright = false;
+ // }
 });
 
 // Clear the canvas
@@ -173,8 +223,9 @@ function draw() {
   // Move and draw the enemies
   enemies.forEach(function(enemy) {
     enemy.x -= enemy.s;
-    if (enemy.x < 0) {
-      gameOver = true;
+
+    if (enemy.x < 0 ) {
+      score = score -1;
     }
     context.fillStyle = '#00FF00';
     enemy.draw();
@@ -182,7 +233,8 @@ function draw() {
   // Collide the ship with enemies
   enemies.forEach(function(enemy, i) {
     if (isColliding(enemy, ship)) {
-      gameOver = true;
+      lives = lives - 1;
+      enemies.splice(i, 1);
     }
   });
   // Move the ship
@@ -192,6 +244,14 @@ function draw() {
   if (up) {
     ship.y -= ship.s;
   }
+  if (right) {
+    ship.x += ship.s;
+  }
+  if (left) {
+    ship.x -= ship.s;
+  }
+
+
   // Don't go out of bounds
   if (ship.y < 0) {
     ship.y = 0;
@@ -199,13 +259,44 @@ function draw() {
   if (ship.y > canvas.height - ship.l) {
     ship.y = canvas.height - ship.l;
   }
+
+  if (ship.x < 0) {
+    ship.x = 0;
+  }
+
+  if (ship.x > canvas.width - ship.l) {
+    ship.x = canvas.width - ship.l;
+  }
+
+  //adding more lives for every 10 points
+  if(score%10 ==0 && score > 0 ){
+      lives = lives + 1;
+    }
   // Draw the ship
   context.fillStyle = '#FF0000';
   ship.draw();
   // Move and draw the bullet
-  if (shooting) {
+
+ 
+  if (shooting ) {
     // Move the bullet
+
+  if( rotateup){
+    bullet.y -= bullet.s;
+  } else
+  if (rotateright){
     bullet.x += bullet.s;
+  } else
+  if( rotatedown){
+    bullet.y += bullet.s;
+  } else
+  if (rotateleft){
+    bullet.x -= bullet.s;
+  } else
+  bullet.x += bullet.s;
+
+
+  
     // Collide the bullet with enemies
     enemies.forEach(function(enemy, i) {
       if (isColliding(bullet, enemy)) {
@@ -222,20 +313,29 @@ function draw() {
         }
       }
     });
+    
     // Collide with the wall
-    if (bullet.x > canvas.width) {
+    if (bullet.x > canvas.width || bullet.x < 0 || bullet.y > canvas.height || bullet.y < 0 ) {
       shooting = false;
     }
     // Draw the bullet
     context.fillStyle = '#0000FF';
     bullet.draw();
   }
-  // Draw the score
+  // Draw the score and lives 
   context.fillStyle = '#000000';
   context.font = '24px Arial';
   context.textAlign = 'left';
   context.fillText('Score: ' + score, 1, 25)
+
+  context.fillStyle = '#000000';
+  context.font = '24px Arial';
+  context.textAlign = 'left';
+  context.fillText('Lives: ' + lives, 1, 75)
   // End or continue the game
+  if( lives == 0){
+    gameOver = true;
+  }
   if (gameOver) {
     endGame();
   } else {
