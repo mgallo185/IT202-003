@@ -225,7 +225,7 @@ function draw() {
     enemy.x -= enemy.s;
 
     if (enemy.x < 0 ) {
-      score = score -1;
+      score = score - 1;
     }
     context.fillStyle = '#00FF00';
     enemy.draw();
@@ -235,6 +235,10 @@ function draw() {
     if (isColliding(enemy, ship)) {
       lives = lives - 1;
       enemies.splice(i, 1);
+
+    }
+    if(enemy.x < 0){
+      enemies.splice(i,1);
     }
   });
   // Move the ship
