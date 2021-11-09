@@ -15,7 +15,7 @@
 }
 nav li{display: inline; background-color: rebeccapurple;}
 nav li a{color: skyblue}
-input{border-radius: 50%;}
+input{border: 50%;}
 body{
     background-color: blue;
     color: rgb(253, 135, 0);
