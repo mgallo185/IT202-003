@@ -2,7 +2,7 @@
 ## Project Summary: This project will create a simple Arcade with scoreboards and competitions based on the implemented game.
 ## Github Link: (Prod Branch of Project Folder)
 ## Project Board Link: https://github.com/mgallo185/IT202-003/projects/1 
-## Website Link: (Heroku Prod of Project folder)
+## Website Link: https://mtg24-prod.herokuapp.com/Project/
 ## Your Name: Michael Gallo
 
 <!--
@@ -37,13 +37,14 @@
         - ![image](https://user-images.githubusercontent.com/89924299/140626626-e64294cb-673b-4569-afa1-d54e53ed89ab.png)
 
 
-  - [ ] \(mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
+  - [x] \(11/09/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
 
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/42
+      - 
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
@@ -59,7 +60,7 @@
         - Screenshot #1 description explaining what you're trying to show
 
 
-  - [ ] \(mm/dd/yyyy of completion) Basic security rules implemented
+  - [x] \(11/09/2021 of completion) Basic security rules implemented
     -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -69,7 +70,7 @@
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
 
-  - [ ] \(mm/dd/yyyy of completion) Basic Roles implemented
+  - [x] \(11/09/2021 of completion) Basic Roles implemented
     -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -79,7 +80,7 @@
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
 
-   - [ ] \(mm/dd/yyyy of completion) Site should have basic styles/theme applied; everything should be styled
+   - [x] \(11/09/2021 of completion) Site should have basic styles/theme applied; everything should be styled
     -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -89,7 +90,7 @@
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
 
-  - [ ] \(mm/dd/yyyy of completion) Any output messages/errors should be “user friendly”
+  - [x] \(11/09/2021 of completion) Any output messages/errors should be “user friendly”
     -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -100,7 +101,7 @@
         - Screenshot #1 description explaining what you're trying to show
 
 
-  - [ ] \(mm/dd/yyyy of completion) User will be able to see their profile
+  - [x] \(11/09/2021) User will be able to see their profile
     -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -110,7 +111,7 @@
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
  -
-  - [ ] \(mm/dd/yyyy of completion)User will be able to edit their profile
+  - [x] \(11/09/2021)User will be able to edit their profile
     -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
