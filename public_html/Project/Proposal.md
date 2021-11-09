@@ -1,7 +1,7 @@
 # Project Name: Simple Arcade
 ## Project Summary: This project will create a simple Arcade with scoreboards and competitions based on the implemented game.
 ## Github Link: (Prod Branch of Project Folder)
-## Project Board Link: 
+## Project Board Link: https://github.com/mgallo185/IT202-003/projects/1 
 ## Website Link: (Heroku Prod of Project folder)
 ## Your Name: Michael Gallo
 
@@ -23,15 +23,19 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
-  - [ ] \(mm/dd/yyyy of completion) User will be able to register a new account
+  - [x] \(11/06/2021) User will be able to register a new account
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Partially Complete 
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/register.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/32
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - ![image](https://user-images.githubusercontent.com/89924299/140626601-fb50cdf5-adce-40df-ba9c-f41bdd051255.png)
+
         - Screenshot #1 description explaining what you're trying to show
+        - ![image](https://user-images.githubusercontent.com/89924299/140626626-e64294cb-673b-4569-afa1-d54e53ed89ab.png)
+
 
   - [ ] \(mm/dd/yyyy of completion) User will be able to login to their account (given they enter the correct credentials)
 
