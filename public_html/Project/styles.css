@@ -3,7 +3,7 @@
 }
 
 .alert-warning {
-    background-color: yellow;
+    background-color: orange;
 }
 
 .alert-danger {
@@ -14,10 +14,10 @@
     background-color: teal;
 }
 nav li{display: inline; background-color: rebeccapurple;}
-nav li a{color: hotpink}
+nav li a{color: skyblue}
 input{border-radius: 50%;}
 body{
-    background-color: hotpink;
-    color: rgb(153, 0, 153);
+    background-color: blue;
+    color: rgb(253, 135, 0);
 
 }
