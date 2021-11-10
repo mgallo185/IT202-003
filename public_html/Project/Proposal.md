@@ -80,11 +80,11 @@
       - PR link #1 (repeat as necessary)
     - Screenshots
       - Screenshot #1 : ![image](https://user-images.githubusercontent.com/89924299/141135349-3fc018d5-5591-4c8b-923e-6ea2c1789fcc.png)
-        - Screenshot #1 description: User Roles table with id, user_id, role_id, is_active, created, and modified
+        - Screenshot #1 description: Table featuring the users.
         - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/141136100-99cad030-0f5c-4c7e-97bd-01312311a228.png)
         - Screenshot #2 description: This is my roles table that features id, name, description, is_active, modified, and created.
         - Screenshot #3: ![image](https://user-images.githubusercontent.com/89924299/141135491-8e62f9bc-58c1-4ad7-8289-d97b45706475.png)
-        - Screenshot #3 description: Table featuring the users. 
+        - Screenshot #3 description:  User Roles table with id, user_id, role_id, is_active, created, and modified
 
    - [x] \(11/09/2021 of completion) Site should have basic styles/theme applied; everything should be styled
     -  List of Evidence of Feature Completion
@@ -105,7 +105,7 @@
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141134004-814bee05-0a8a-4615-ab75-6c0717903530.png
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141134004-814bee05-0a8a-4615-ab75-6c0717903530.png)
         - Screenshot #1 description: Here's an example of one of user friendly changes. When inputing the wrong current password when attempting to change your password in your profile, a popup message appears showing that an invalid password was inputted.
 
 
