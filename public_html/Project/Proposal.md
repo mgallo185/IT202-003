@@ -64,7 +64,7 @@
 
   - [x] \(11/09/2021 of completion) Basic security rules implemented
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
@@ -108,6 +108,8 @@
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141134004-814bee05-0a8a-4615-ab75-6c0717903530.png)
         - Screenshot #1 description: Here's an example of one of user friendly changes. When inputing the wrong current password when attempting to change your password in your profile, a popup message appears showing that an invalid password was inputted.
+        - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/141141008-d942d12b-261a-423c-90ff-307d3ee77ebb.png)
+        - Screenshot #2 description: What causes these user friendly messages is the flash.php file as shown above.
 
 
   - [x] \(11/09/2021) User will be able to see their profile
