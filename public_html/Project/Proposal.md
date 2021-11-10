@@ -34,8 +34,8 @@
     
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141145683-08ea717e-5312-4c4d-9e18-32f9fbd07295.png)
-        - Screenshot #1description: Updated register which includes adding adding a username.
-        -- Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/141135349-3fc018d5-5591-4c8b-923e-6ea2c1789fcc.png)
+        - Screenshot #1 description: Updated register which includes adding adding a username.
+        - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/141135349-3fc018d5-5591-4c8b-923e-6ea2c1789fcc.png)
         - Screenshot #2 description: Table featuring the users.
         - Screenshot #3: ![image](https://user-images.githubusercontent.com/89924299/141146473-8ea23c19-a334-49c3-983b-4abf23a1d7cf.png)
         - Screenshot #3: Hashing of the password
