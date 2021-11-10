@@ -25,7 +25,7 @@
 - Milestone 1
   - [x] \(11/06/2021) User will be able to register a new account
     -  List of Evidence of Feature Completion
-    - Status: Partially Complete 
+    - Status: Completed 
     - Direct Link: https://mtg24-prod.herokuapp.com/Project/register.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/32
@@ -34,8 +34,7 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
       - ![image](https://user-images.githubusercontent.com/89924299/140626601-fb50cdf5-adce-40df-ba9c-f41bdd051255.png)
-
-        - Screenshot #1 description explaining what you're trying to show
+        - Screenshot #1 description: early version of register showcasing regsitering an account
         - ![image](https://user-images.githubusercontent.com/89924299/140626626-e64294cb-673b-4569-afa1-d54e53ed89ab.png)
 
 
