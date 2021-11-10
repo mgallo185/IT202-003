@@ -69,9 +69,8 @@
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141139158-8ca0aba4-4517-4c71-af88-28053dc3da33.png)
+        - Screenshot #1 description: Function to check if user is logged in and function should be called on appropriate pages that only allow logged in users
   - [x] \(11/09/2021 of completion) Basic Roles implemented
     -  List of Evidence of Feature Completion
     - Status: Completed
