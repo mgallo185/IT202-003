@@ -32,11 +32,24 @@
       - PR Link #2: https://github.com/mgallo185/IT202-003/pull/48
       - 
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1
       - ![image](https://user-images.githubusercontent.com/89924299/140626601-fb50cdf5-adce-40df-ba9c-f41bdd051255.png)
         - Screenshot #1 description: early version of register showcasing regsitering an account
+        - Screenshot #2:
         - ![image](https://user-images.githubusercontent.com/89924299/140626626-e64294cb-673b-4569-afa1-d54e53ed89ab.png)
-
+        - Screenshot #2 description: Account is registered
+        - Screenshot #3: ![image](https://user-images.githubusercontent.com/89924299/141145683-08ea717e-5312-4c4d-9e18-32f9fbd07295.png)
+        - Screenshot #3 description: Updated register which includes adding adding a username.
+        -- Screenshot #4 : ![image](https://user-images.githubusercontent.com/89924299/141135349-3fc018d5-5591-4c8b-923e-6ea2c1789fcc.png)
+        - Screenshot #4 description: Table featuring the users.
+        - Screenshot #5: ![image](https://user-images.githubusercontent.com/89924299/141146473-8ea23c19-a334-49c3-983b-4abf23a1d7cf.png)
+        - Screenshot #5: Hashing of the password
+        - Screenshot #6: ![image](https://user-images.githubusercontent.com/89924299/141146840-2069293d-bd01-46e2-bff4-7f26b0dac1e2.png)
+        - Screenshot #6 description: Attempt to register an account using a email that already has an account which results in a message appearing stating the email is not available. The form does not clear the username or email, it only clears the password
+        - Screenshot #7: ![image](https://user-images.githubusercontent.com/89924299/141147517-a202ec76-0c77-4cd1-8b67-a7fc99788bce.png)
+        - Screenshot #7 description: Similar to screenshot 6, this attempts to register an account with a username that's already taken which results in the username not be avaiable. The form does not clear the username or email.
+        - Screenshot #8: ![image](https://user-images.githubusercontent.com/89924299/141147927-01c6fe3a-e502-406d-8cef-6f6895332bd0.png)
+        - Screenshot #8 description: Successful registration of a new user.
 
   - [x] \(11/09/2021 of completion) User will be able to login to their account (given they enter the correct credentials)
 
@@ -57,8 +70,14 @@
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/48
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/141148353-ee3f576e-3a37-4e9f-84a2-511eb25d5c86.png)
+        - Screenshot #1 description: Logout button is on the navigation.
+        - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/141148465-882e5c55-7f3a-48d4-948d-8b1f9310be8c.png)
+        - Screenshot #2 description: After clicking logout, the session will be destroyed and the user will be redirected to the login page. A message is shown that logging out was successful
+        - Screenshot #3 ![image](https://user-images.githubusercontent.com/89924299/141148637-a9436ead-6274-4ee9-aeb8-b1d7def351a3.png)
+        - Screenshot #3 description: If the user tries to go back to the home page using the back button, they will not go to the home page, they would still stay on login with a message stating they could only access the home page if they are logged in.
+
+
 
 
   - [x] \(11/09/2021 of completion) Basic security rules implemented
