@@ -29,6 +29,8 @@
     - Direct Link: https://mtg24-prod.herokuapp.com/Project/register.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/32
+      - PR Link #2: https://github.com/mgallo185/IT202-003/pull/48
+      - 
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
       - ![image](https://user-images.githubusercontent.com/89924299/140626601-fb50cdf5-adce-40df-ba9c-f41bdd051255.png)
@@ -49,12 +51,12 @@
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
 
-  - [ ] \(mm/dd/yyyy of completion) User will be able to logout
+  - [x] \(11/09/2021 of completion) User will be able to logout
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/logout.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/48
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
@@ -72,54 +74,70 @@
 
   - [x] \(11/09/2021 of completion) Basic Roles implemented
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 : ![image](https://user-images.githubusercontent.com/89924299/141135349-3fc018d5-5591-4c8b-923e-6ea2c1789fcc.png)
+        - Screenshot #1 description: User Roles table with id, user_id, role_id, is_active, created, and modified
+        - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/141136100-99cad030-0f5c-4c7e-97bd-01312311a228.png)
+        - Screenshot #2 description: This is my roles table that features id, name, description, is_active, modified, and created.
+        - Screenshot #3: ![image](https://user-images.githubusercontent.com/89924299/141135491-8e62f9bc-58c1-4ad7-8289-d97b45706475.png)
+        - Screenshot #3 description: Table featuring the users. 
 
    - [x] \(11/09/2021 of completion) Site should have basic styles/theme applied; everything should be styled
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/styles.css https://mtg24-prod.herokuapp.com/Project/login.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - https://github.com/mgallo185/IT202-003/pull/44/
+      - 
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141129777-5d4479ea-bf27-4b47-a133-e7183e894e2f.png)
+
+        - Screenshot #1 description: I made the background a dark blue and some of the text orange.
 
   - [x] \(11/09/2021 of completion) Any output messages/errors should be “user friendly”
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141134004-814bee05-0a8a-4615-ab75-6c0717903530.png
+        - Screenshot #1 description: Here's an example of one of user friendly changes. When inputing the wrong current password when attempting to change your password in your profile, a popup message appears showing that an invalid password was inputted.
 
 
   - [x] \(11/09/2021) User will be able to see their profile
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/44/
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141130893-08b50106-9f1a-4e13-9003-c214fcd8bef7.png)
+        - Screenshot #1 description: This is the profile page where the user can see their profile
  -
   - [x] \(11/09/2021)User will be able to edit their profile
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/46
+      - 
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141131332-50873a79-86b7-45f1-8ba9-0f6e45991f6c.png)
+        - Screenshot #1 description: The user can change their information if they wish on this page. They can change their username or email as long as the email or username isn't already taken. They change their password as long as they input their old password and then input the new password twice.
+       - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/141132930-f3fb8ecd-cc25-4598-b522-41f34250674b.png)
+       - Screenshot #2 description: Here I attempt to change my email from 1sttest@email.com to 1test@email.com
+       - Screenshot #3: ![image](https://user-images.githubusercontent.com/89924299/141133148-ecb5919f-a40b-4250-8750-2767b2dd9339.png)
+       - Screenshot #3 description: The result of my attempt to change the email is that it didn't apply because the email already has it's own profile
+       - Screenshot #4 ![image](https://user-images.githubusercontent.com/89924299/141133710-be51c970-228c-46f8-8251-3fde60f703fe.png)
+       - Screenshot #4 description: Here I'm attempting to update my password. I'm using the wrong current password to show that the change to a new password will not apply.
+       - Screenshot #5: ![image](https://user-images.githubusercontent.com/89924299/141134004-814bee05-0a8a-4615-ab75-6c0717903530.png)
+       - Screenshot #5 description: The result of Screenshot 4 results in the password not being changed because I inputed the wrong current password
+
                
 
         
