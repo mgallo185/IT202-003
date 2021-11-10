@@ -31,7 +31,7 @@
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/32
       - PR Link #2: https://github.com/mgallo185/IT202-003/pull/48
       - PR Link #3 https://github.com/mgallo185/IT202-003/pull/46/
-      - 
+    
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141145683-08ea717e-5312-4c4d-9e18-32f9fbd07295.png)
         - Screenshot #1description: Updated register which includes adding adding a username.
