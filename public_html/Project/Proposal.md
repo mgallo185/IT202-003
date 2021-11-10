@@ -144,7 +144,8 @@
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141130893-08b50106-9f1a-4e13-9003-c214fcd8bef7.png)
         - Screenshot #1 description: This is the profile page where the user can see their profile
- -
+       
+       
   - [x] \(11/09/2021)User will be able to edit their profile
     -  List of Evidence of Feature Completion
     - Status: Completed
