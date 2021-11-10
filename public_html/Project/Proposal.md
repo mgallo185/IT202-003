@@ -71,6 +71,8 @@
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141139158-8ca0aba4-4517-4c71-af88-28053dc3da33.png)
         - Screenshot #1 description: Function to check if user is logged in and function should be called on appropriate pages that only allow logged in users
+        - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/141144409-41cb66dd-9d4f-44d7-ab64-d5749b5ca4f7.png)
+        - Screenshot #2 description: Roles table
   - [x] \(11/09/2021 of completion) Basic Roles implemented
     -  List of Evidence of Feature Completion
     - Status: Completed
