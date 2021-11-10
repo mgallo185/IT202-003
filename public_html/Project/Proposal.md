@@ -60,8 +60,25 @@
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/42
       - 
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141149752-50858bc5-00a6-4023-b9c0-7830ea4dd146.png)
+        - Screenshot #1 description: Login page, the form can have the user login with either email or username which can be done on the same field.
+        - Screenshot 2: Tried logging into an account that doesn't exist
+        - ![image](https://user-images.githubusercontent.com/89924299/141150814-b2775247-ddf6-44e1-ac17-58ecc79bc7d3.png)
+
+        - Screenshot 3: tried logging into account with the wrong password
+        - ![image](https://user-images.githubusercontent.com/89924299/141150713-5c1f641c-1af8-4ac2-867c-024035526ae0.png)
+
+        - Screenshot 4: The user is directed to the home page
+        - ![image](https://user-images.githubusercontent.com/89924299/141150895-21af6d3b-e40c-4f00-b60b-3bff56ce188b.png)
+
+        - Screenshot 5: ![image](https://user-images.githubusercontent.com/89924299/141151063-f0ae05e2-4a7a-43a6-bff0-be8868075c58.png)
+
+        -  Logging in fetches user details and saves them into a session
+        - 
+        - Screenshot 6: ![image](https://user-images.githubusercontent.com/89924299/141150618-be792a27-599a-4954-9624-ff4b98bfb733.png)
+
+        - when trying to log in without a password or username, a message will appear stating to fill out the field
+        - 
 
   - [x] \(11/09/2021 of completion) User will be able to logout
     -  List of Evidence of Feature Completion
