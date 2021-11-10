@@ -85,6 +85,8 @@
         - Screenshot #2 description: User Roles table with id, user_id, role_id, is_active, created, and modified
         - Screenshot #3: ![image](https://user-images.githubusercontent.com/89924299/141135491-8e62f9bc-58c1-4ad7-8289-d97b45706475.png)
         - Screenshot #3 description: This is my roles table that features id, name, description, is_active, modified, and created. 
+        - Screenshot #4 ![image](https://user-images.githubusercontent.com/89924299/141137999-e7c947a0-04cd-42de-b0aa-e7c8b67f12d2.png)
+        - Screenshot #4 description: This is the function to see if the user has a role.
 
    - [x] \(11/09/2021 of completion) Site should have basic styles/theme applied; everything should be styled
     -  List of Evidence of Feature Completion
