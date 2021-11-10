@@ -53,7 +53,7 @@
     - Direct Link: https://mtg24-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/42
-      - 
+      - PR link #2: https://github.com/mgallo185/IT202-003/pull/45/
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141149752-50858bc5-00a6-4023-b9c0-7830ea4dd146.png)
         - Screenshot #1 description: Login page, the form can have the user login with either email or username which can be done on the same field.
@@ -61,15 +61,12 @@
         - Screenshot #2 description: Tried logging into an account that doesn't exist
         - Screenshot #3: ![image](https://user-images.githubusercontent.com/89924299/141150713-5c1f641c-1af8-4ac2-867c-024035526ae0.png)
         - Screenshot #3 description tried logging into account with the wrong password
-
         - Screenshot #4: ![image](https://user-images.githubusercontent.com/89924299/141150895-21af6d3b-e40c-4f00-b60b-3bff56ce188b.png)
         - Screenshot #4 description: The user is directed to the home page
-
         - Screenshot #5: ![image](https://user-images.githubusercontent.com/89924299/141151063-f0ae05e2-4a7a-43a6-bff0-be8868075c58.png)
         -  Screenshot #5 description: Logging in fetches user details and saves them into a session
-        - 
         - Screenshot #6: ![image](https://user-images.githubusercontent.com/89924299/141150618-be792a27-599a-4954-9624-ff4b98bfb733.png)
-        - Screenshot #6 description when trying to log in without a password or username, a message will appear stating to fill out the field
+        - Screenshot #6 description: when trying to log in without a password or username, a message will appear stating to fill out the field
    
   - [x] \(11/09/2021 of completion) User will be able to logout
     -  List of Evidence of Feature Completion
@@ -86,25 +83,25 @@
         - Screenshot #3 description: If the user tries to go back to the home page using the back button, they will not go to the home page, they would still stay on login with a message stating they could only access the home page if they are logged in.
 
 
-
-
   - [x] \(11/09/2021 of completion) Basic security rules implemented
     -  List of Evidence of Feature Completion
     - Status: Completed
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/43/
+      - PR link #2: https://github.com/mgallo185/IT202-003/pull/45
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141139158-8ca0aba4-4517-4c71-af88-28053dc3da33.png)
         - Screenshot #1 description: Function to check if user is logged in and function should be called on appropriate pages that only allow logged in users
         - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/141144409-41cb66dd-9d4f-44d7-ab64-d5749b5ca4f7.png)
         - Screenshot #2 description: Roles table
+   
   - [x] \(11/09/2021 of completion) Basic Roles implemented
     -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/sql/ http://mtg24-prod.herokuapp.com/Project/admin/
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/41/
     - Screenshots
       - Screenshot #1 : ![image](https://user-images.githubusercontent.com/89924299/141135349-3fc018d5-5591-4c8b-923e-6ea2c1789fcc.png)
         - Screenshot #1 description: Table featuring the users.
@@ -121,18 +118,16 @@
     - Direct Link: https://mtg24-prod.herokuapp.com/Project/styles.css https://mtg24-prod.herokuapp.com/Project/login.php
     - Pull Requests
       - https://github.com/mgallo185/IT202-003/pull/44/
-      - 
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141129777-5d4479ea-bf27-4b47-a133-e7183e894e2f.png)
-
         - Screenshot #1 description: I made the background a dark blue and some of the text orange.
 
   - [x] \(11/09/2021 of completion) Any output messages/errors should be “user friendly”
     -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php 
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/17/
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141134004-814bee05-0a8a-4615-ab75-6c0717903530.png)
         - Screenshot #1 description: Here's an example of one of user friendly changes. When inputing the wrong current password when attempting to change your password in your profile, a popup message appears showing that an invalid password was inputted.
@@ -156,7 +151,6 @@
     - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/46
-      - 
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/141131332-50873a79-86b7-45f1-8ba9-0f6e45991f6c.png)
         - Screenshot #1 description: The user can change their information if they wish on this page. They can change their username or email as long as the email or username isn't already taken. They change their password as long as they input their old password and then input the new password twice.
@@ -171,7 +165,6 @@
 
                
 
-        
 - Milestone 2
 - Milestone 3
 - Milestone 4
