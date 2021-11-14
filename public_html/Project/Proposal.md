@@ -1,4 +1,9 @@
 # Project Name: Simple Arcade
+## Project Summary: (Copy from proposal)
+## Github Link: (Prod Branch of Project Folder)
+## Project Board Link: 
+## Website Link: (Heroku Prod of Project folder)
+## Your Name:
 ## Project Summary: This project will create a simple Arcade with scoreboards and competitions based on the implemented game.
 ## Github Link: https://github.com/mgallo185/IT202-003/tree/prod/public_html/Project
 ## Project Board Link: https://github.com/mgallo185/IT202-003/projects/1 
@@ -23,6 +28,44 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
+
+- Milestone 2
+  - [ ] \(mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+  - [ ] \(mm/dd/yyyy of completion) The system will save the user’s score at the end of the game if the user is logged in
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+  - [ ] \(mm/dd/yyyy of completion) The user will be able to see their last 10 scores
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
+  - [ ] \(mm/dd/yyyy of completion) Create functions that output the following scoreboards
+  -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+        - Screenshot #1 description explaining what you're trying to show
   - [x] \(11/06/2021) User will be able to register a new account
     -  List of Evidence of Feature Completion
     - Status: Completed 
@@ -167,6 +210,7 @@
                
 
 - Milestone 2
+
 - Milestone 3
 - Milestone 4
 ### Intructions
@@ -202,4 +246,8 @@
   7. If the attached issues don't close wait until the next step
   8. Merge the updated dev branch into your production branch via a pull request
   9. Close any related issues that didn't auto close
+
     - You can edit the dropdown on the issue or drag/drop it to the proper column on the project board
+
+    - You can edit the dropdown on the issue or drag/drop it to the proper column on the project board
+
