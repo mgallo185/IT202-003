@@ -15,7 +15,7 @@ $username = se($_POST, "username", "", false);
         <div class="mb-3">
             <label class="form-label" for="username">Username</label>
             <input class="form-control" type="text" name="username" required maxlength="30" 
-            required value = "<?php se($username); ?>" />/>
+            required value = "<?php se($username); ?>" />
         </div>
         <div class="mb-3">
             <label class="form-label" for="pw">Password</label>
