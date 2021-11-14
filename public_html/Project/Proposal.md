@@ -246,8 +246,8 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-- Milestone 
- - [ ] \(mm/dd/yyyy of completion) Users will have points associated with their account.
+- Milestone 3
+   - [ ] \(mm/dd/yyyy of completion) Users will have points associated with their account.
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
