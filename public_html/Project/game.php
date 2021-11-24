@@ -130,8 +130,27 @@ function endGame() {
   context.font = '24px Arial';
   context.textAlign = 'center';
   context.fillText('Game Over. Final Score: ' + score, canvas.width / 2, canvas.height / 2);
+  let savedata = 1;
 }
 
+if (savedata === 1){
+  //fetch api way
+  fetch("api/save_score.php", {
+  method: "POST",
+  headers: {
+   "Content-type": "application/json",
+   "X-Requested-With": "XMLHttpRequest",
+  },
+  body: JSON.stringify({
+  "data": data
+  })
+  }).then(async res => {
+  let data = await res.json();
+   console.log("received data", data);
+   console.log("saved score");
+   //window.location.reload(); //lazily reloading the page to get a new nonce for next game
+  })
+  }
 // Listen for keydown events
 canvas.addEventListener('keydown', function(event) {
   event.preventDefault();
