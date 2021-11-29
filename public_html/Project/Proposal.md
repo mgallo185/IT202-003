@@ -208,7 +208,7 @@
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
     - Screenshots
-      - Screenshot #1: !![image](https://user-images.githubusercontent.com/89924299/143901290-c02bfe77-33d3-489c-b75c-76ebbffb2d05.png)
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/143901290-c02bfe77-33d3-489c-b75c-76ebbffb2d05.png)
         - Screenshot #1 description: Recent Scores for user 1sttest. These are 5 recent scores. 
        - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/143902075-1b0433fa-f45b-47ca-a72e-8eafaf03be7f.png)
        - Screenshot #2 description: After playing 11 games, the oldest score got removed, which shows the last 10 scores of the user. From screenshot 1, the oldest score was 1, now the oldest score is 2. 
