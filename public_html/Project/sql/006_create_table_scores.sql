@@ -1,11 +1,10 @@
-CREATE TABLE IF NOT EXISTS 'Scores'
+CREATE TABLE IF NOT EXISTS GamerScores
 (
-     `id`         int auto_increment not null,
-    `user_id`    int,
-    `score`  int;
-    `created`    timestamp default current_timestamp,
-    PRIMARY KEY (`id`),
+     id         int auto_increment primary key,
+    user_id    int,
+    recordScore  int,
+    created   timestamp default current_timestamp,
     FOREIGN KEY (user_id) REFERENCES Users(id),
-    check (score > 0)
+    check (recordScore > 0)
 
 )

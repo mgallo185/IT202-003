@@ -142,7 +142,7 @@ function save_score($score, $user_id, $showFlash = false)
         return;
     }
     $db = getDB();
-    $stmt = $db->prepare("INSERT INTO BGD_Scores (score, user_id) VALUES (:score, :uid)");
+    $stmt = $db->prepare("INSERT INTO GamerScores (recordScore, user_id) VALUES (:score, :uid)");
     try {
         $stmt->execute([":score" => $score, ":uid" => $user_id]);
         if ($showFlash) {

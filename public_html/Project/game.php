@@ -1,6 +1,7 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
 ?>
+
   <style>
 
 #canvas {
@@ -130,12 +131,12 @@ function endGame() {
   context.font = '24px Arial';
   context.textAlign = 'center';
   context.fillText('Game Over. Final Score: ' + score, canvas.width / 2, canvas.height / 2);
-  let savedata = 1;
-}
+  let data = {
+  recordScore :score
+ };
 
-if (savedata === 1){
   //fetch api way
-  fetch("api/save_score.php", {
+  fetch("AJAX/save_score.php", {
   method: "POST",
   headers: {
    "Content-type": "application/json",
@@ -150,7 +151,7 @@ if (savedata === 1){
    console.log("saved score");
    //window.location.reload(); //lazily reloading the page to get a new nonce for next game
   })
-  }
+}
 // Listen for keydown events
 canvas.addEventListener('keydown', function(event) {
   event.preventDefault();
@@ -363,6 +364,7 @@ function draw() {
   }
   if (gameOver) {
     endGame();
+  
   } else {
     window.requestAnimationFrame(draw);
   }
@@ -372,3 +374,7 @@ function draw() {
 menu();
 canvas.focus();
 </script>
+
+<?php
+require(__DIR__ . "/../../partials/flash.php");
+?>
