@@ -51,7 +51,6 @@ switch ($duration) {
                                     <?php se($result, "username"); ?>
                                 </td>
                                 <td><?php se($result, "scoreState"); ?></td>
-                                <td><?php se($result, "score"); ?></td>
                                 <td><?php se($result, "created"); ?></td>
                             </tr>
                         <?php endforeach; ?>
