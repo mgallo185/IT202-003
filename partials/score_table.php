@@ -50,6 +50,7 @@ switch ($duration) {
                                     <!--<a href="profile.php?id=<?php se($result, 'user_id'); ?>"><?php se($result, "username"); ?></a>-->
                                     <?php se($result, "username"); ?>
                                 </td>
+                                <td><?php se($result, "scoreState"); ?></td>
                                 <td><?php se($result, "score"); ?></td>
                                 <td><?php se($result, "created"); ?></td>
                             </tr>
