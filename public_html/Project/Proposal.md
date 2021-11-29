@@ -1,9 +1,4 @@
 # Project Name: Simple Arcade
-## Project Summary: (Copy from proposal)
-## Github Link: (Prod Branch of Project Folder)
-## Project Board Link: 
-## Website Link: (Heroku Prod of Project folder)
-## Your Name:
 ## Project Summary: This project will create a simple Arcade with scoreboards and competitions based on the implemented game.
 ## Github Link: https://github.com/mgallo185/IT202-003/tree/prod/public_html/Project
 ## Project Board Link: https://github.com/mgallo185/IT202-003/projects/1 
