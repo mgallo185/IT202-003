@@ -1,6 +1,7 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-?>
+ ?>
+
   <style>
 
 #canvas {
@@ -86,13 +87,14 @@ function isColliding(a, b) {
 }
 
 // Track the user's score
-var score = 0;
+let gameData  = {
+ score: 0,
+}
 var lives = 3;
 // The delay between enemies (in milliseconds)
 var timeBetweenEnemies = 5 * 1000;
 // ID to track the spawn timeout
 var timeoutId = null;
-
 // Show the game menu and instructions
 function menu() {
   erase();
@@ -125,13 +127,34 @@ function endGame() {
 	// Stop the spawn interval
   clearInterval(timeoutId);
   // Show the final score
+  var finalScore = gameData.score;
   erase();
   context.fillStyle = '#000000';
   context.font = '24px Arial';
   context.textAlign = 'center';
-  context.fillText('Game Over. Final Score: ' + score, canvas.width / 2, canvas.height / 2);
-}
+  context.fillText('Game Over. Final Score: ' + finalScore, canvas.width / 2, canvas.height / 2);
 
+  let data = {
+  score :finalScore
+ };
+
+  //fetch api way
+  fetch("AJAX/save_score.php", {
+  method: "POST",
+  headers: {
+   "Content-type": "application/json",
+   "X-Requested-With": "XMLHttpRequest",
+  },
+  body: JSON.stringify({
+  "data": data
+  })
+  }).then(async res => {
+  let data = await res.json();
+   console.log("received data", data);
+   console.log("saved score");
+   //window.location.reload(); //lazily reloading the page to get a new nonce for next game
+  })
+}
 // Listen for keydown events
 canvas.addEventListener('keydown', function(event) {
   event.preventDefault();
@@ -222,7 +245,7 @@ function draw() {
     enemy.x -= enemy.s;
 
     if (enemy.x < 0 ) {
-      score = score - 1;
+      gameData.score = gameData.score - 1;
     }
     context.fillStyle = '#00FF00';
     enemy.draw();
@@ -302,18 +325,18 @@ function draw() {
     enemies.forEach(function(enemy, i) {
       if (isColliding(bullet, enemy)) {
         enemies.splice(i, 1);
-        score++;
+        gameData.score++;
         shooting = false;
         // Make the game harder
-        if (score % 10 === 0 && timeBetweenEnemies > 1000) {
+        if (gameData.score % 10 === 0 && timeBetweenEnemies > 1000) {
           clearInterval(timeoutId);
           timeBetweenEnemies -= 1000;
           timeoutId = setInterval(makeEnemy, timeBetweenEnemies);
-        } else if (score % 5 === 0) {
+        } else if (gameData.score % 5 === 0) {
           enemyBaseSpeed += 1;
         }
          //adding more lives for every 10 points
-   if(score%10 ==0 && score > 0 ){
+   if(gameData.score%10 ==0 && gameData.score > 0 ){
       lives = lives + 1;
     }
       }
@@ -332,7 +355,7 @@ function draw() {
   context.fillStyle = '#000000';
   context.font = '24px Arial';
   context.textAlign = 'left';
-  context.fillText('Score: ' + score, 1, 25)
+  context.fillText('Score: ' + gameData.score, 1, 25)
 
   context.fillStyle = '#000000';
   context.font = '24px Arial';
@@ -353,3 +376,7 @@ function draw() {
 menu();
 canvas.focus();
 </script>
+
+<?php
+require(__DIR__ . "/../../partials/flash.php");
+?>
