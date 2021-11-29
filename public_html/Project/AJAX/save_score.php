@@ -29,10 +29,10 @@ $response =["message" => "Testing "];
         flash($response["message"], "warning");
     }
     if (!$reject) {
-        $response["message"] = "test";
+        $response["message"] = "this is a test";
         $user_id = get_user_id();
-        $score = (int)se($data, "score", 0,false);
-        save_score($score, $user_id,true);
+        $score = (int)se($data, "score", 0, false);
+        save_score($score, $user_id, true);
         $response["message"] = "score Saved";
         error_log("score successful!");
         http_response_code(200);

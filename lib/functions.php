@@ -137,12 +137,12 @@ function save_score($score, $user_id, $showFlash = false)
         flash("Error saving score, you may not be logged in", "warning");
         return;
     }
-    if ($score <= 0) {
-        flash("Scores of zero are not recorded", "warning");
-        return;
-    }
+    //if ($score <= 0) {
+     //   flash("Scores of zero are not recorded", "warning");
+     //   return;
+  //  }
     $db = getDB();
-    $stmt = $db->prepare("INSERT INTO GamerScores (recordScore, user_id) VALUES (:score, :uid)");
+    $stmt = $db->prepare("INSERT INTO GamerScores (score, user_id) VALUES (:score, :uid)");
     try {
         $stmt->execute([":score" => $score, ":uid" => $user_id]);
         if ($showFlash) {

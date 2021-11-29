@@ -2,9 +2,10 @@ CREATE TABLE IF NOT EXISTS GamerScores
 (
      id         int auto_increment primary key,
     user_id    int,
-    recordScore  int,
+    scoreState  int,
     created   timestamp default current_timestamp,
+    modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES Users(id),
-    check (recordScore > 0)
+    check (scoreState > 0)
 
 )
