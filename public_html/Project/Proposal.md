@@ -170,18 +170,20 @@
   - [x] \(11/16/2021 of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator
   -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/game.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/64
     - Screenshots
-      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/143814324-132eb5be-6f9c-4239-a727-2de51bb24b5a.png)
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/143898484-f700e3d2-541e-491f-958c-2be8d0134952.png)
+        - Screenshot #1 description: This game builds off of the previous HTML 5 HW where you have enemies coming onto the screen and the player needs to shoot them to earn points. You lose a point if an enemy gets to the other side of the screen and you lose a life if an enemy hits you. Shown above is the title screen
+       - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/143898789-c09b4f9e-ac08-45cd-b051-cf014e0b5468.png)
+        - Screenshot #2 description: This is the actual game, the red square is the playable character and the green square is the enemy
 
-        - Screenshot #1 description explaining what you're trying to show
-        - This game builds off of the previous HTML 5 HW where you have enemies coming onto the screen and the player needs to shoot them to earn points.
+
   - [x] \(11/29/2021 of completion) The system will save the user’s score at the end of the game if the user is logged in
   -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/AJAX/save_score.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/66
       - PR Link 2: https://github.com/mgallo185/IT202-003/pull/67
@@ -189,24 +191,37 @@
       - Screenshot #1
         - ![image](https://user-images.githubusercontent.com/89924299/143814051-e89fcc01-6cd9-42e3-93fa-c5716c9f2d6a.png)
       - This is the table for the scores with each recieved score being a new entry even if its from the same user
-
+      -   Screenshot #2
+        - ![image](https://user-images.githubusercontent.com/89924299/143900307-f5f3ffd7-63c6-4d3b-84ce-623272298652.png)
+      - The user is logged in and the score is saved shown in console.
+      -  Screenshot #3
+        - ![image](https://user-images.githubusercontent.com/89924299/143900529-62413dca-9e77-476e-bae5-a381d48bcb79.png)
+      - After refreshing the page, a flash message is shown that the score is saved.
+      - Screenshot #4
+      - ![image](https://user-images.githubusercontent.com/89924299/143900806-86f7e2d1-ce15-4600-bd4f-b2f0d42cc043.png)
+      - After someone who is not logged in plays the game and gets a score above 0 and refreshes the page. A flash message appears stating they need to be logged in for the score to save. 
+      
   - [x] \(11/29/2021 of completion) The user will be able to see their last 10 scores
   -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
     - Screenshots
-      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/143884846-7a3d03d7-08cf-488a-a9d7-a32f959a825a.png)
-        - Screenshot #1 description: Recent Scores
-  - [x] \(mm/dd/yyyy of completion) Create functions that output the following scoreboards
+      - Screenshot #1: !![image](https://user-images.githubusercontent.com/89924299/143901290-c02bfe77-33d3-489c-b75c-76ebbffb2d05.png)
+        - Screenshot #1 description: Recent Scores for user 1sttest. These are 5 recent scores. 
+       - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/143902075-1b0433fa-f45b-47ca-a72e-8eafaf03be7f.png)
+       - Screenshot #2 description: After playing 11 games, the oldest score got removed, which shows the last 10 scores of the user. From screenshot 1, the oldest score was 1, now the oldest score is 2. 
+
+
+  - [x] \(11/29/2021 of completion) Create functions that output the following scoreboards
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Complete
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1: 
         - Screenshot #1 description explaining what you're trying to show
 - Milestone 3
    - [ ] \(mm/dd/yyyy of completion) Users will have points associated with their account.
