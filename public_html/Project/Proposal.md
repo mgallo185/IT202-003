@@ -172,34 +172,39 @@
                
 
 - Milestone 2
-  - [ ] \(mm/dd/yyyy of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator
+  - [x] \(11/16/2021 of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/64
+    - Screenshots
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/143814324-132eb5be-6f9c-4239-a727-2de51bb24b5a.png)
+
+        - Screenshot #1 description explaining what you're trying to show
+        - This game builds off of the previous HTML 5 HW where you have enemies coming onto the screen and the player needs to shoot them to earn points.
+  - [x] \(11/29/2021 of completion) The system will save the user’s score at the end of the game if the user is logged in
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/66
+      - PR Link 2: https://github.com/mgallo185/IT202-003/pull/67
+    - Screenshots
+      - Screenshot #1
+        - ![image](https://user-images.githubusercontent.com/89924299/143814051-e89fcc01-6cd9-42e3-93fa-c5716c9f2d6a.png)
+      - This is the table for the scores with each recieved score being a new entry even if its from the same user
+
+  - [x] \(11/29/2021 of completion) The user will be able to see their last 10 scores
+  -  List of Evidence of Feature Completion
+    - Status: Completed
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(mm/dd/yyyy of completion) The system will save the user’s score at the end of the game if the user is logged in
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(mm/dd/yyyy of completion) The user will be able to see their last 10 scores
-  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
-    - Pull Requests
-      - PR link #1 (repeat as necessary)
-    - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(mm/dd/yyyy of completion) Create functions that output the following scoreboards
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/143884846-7a3d03d7-08cf-488a-a9d7-a32f959a825a.png)
+        - Screenshot #1 description: Recent Scores
+  - [x] \(mm/dd/yyyy of completion) Create functions that output the following scoreboards
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
