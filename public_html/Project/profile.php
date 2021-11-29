@@ -84,6 +84,7 @@ if (isset($_POST["save"])) {
 <?php
 $email = get_user_email();
 $username = get_username();
+$user_id = get_user_id()
 ?>
 <div class="container-fluid">
     <h1>Profile</h1>
@@ -101,7 +102,7 @@ $username = get_username();
             <tbody>
                 <?php foreach ($scores as $score) : ?>
                     <tr>
-                        <td><?php se($score, "score", 0); ?></td>
+                        <td><?php se($score, "scoreState", 0); ?></td>
                         <td><?php se($score, "created", "-"); ?></td>
                     </tr>
                 <?php endforeach; ?>

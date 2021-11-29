@@ -185,14 +185,14 @@ function get_top_10($duration = "day")
 
 function get_best_score($user_id)
 {
-    $query = "SELECT scoreState from GamerScores WHERE user_id = :id ORDER BY score desc LIMIT 1";
+    $query = "SELECT scoreState from GamerScores WHERE user_id = :id ORDER BY scoreState desc LIMIT 1";
     $db = getDB();
     $stmt = $db->prepare($query);
     try {
         $stmt->execute([":id" => $user_id]);
         $r = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($r) {
-            return (int)se($r, "score", 0, false);
+            return (int)se($r, "scoreState", 0, false);
         }
     } catch (PDOException $e) {
         error_log("Error fetching best score for user $user_id: " . var_export($e->errorInfo, true));
