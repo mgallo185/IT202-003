@@ -216,13 +216,13 @@
 
   - [x] \(11/29/2021 of completion) Create functions that output the following scoreboards
   -  List of Evidence of Feature Completion
-    - Status: Complete
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: 
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
     - Screenshots
-      - Screenshot #1: 
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/143928304-db089f49-2731-4363-95ed-93d91f9b9cfc.png)
+        - Screenshot #1 description: function of scoreboards for day, week, month, and year, all in one function with the limit of 10 results
 - Milestone 3
    - [ ] \(mm/dd/yyyy of completion) Users will have points associated with their account.
   -  List of Evidence of Feature Completion
