@@ -162,17 +162,12 @@ function get_top_10($duration = "day")
     }
     $db = getDB();
     $query = "SELECT user_id,username, scoreState, GamerScores.created from GamerScores join Users on GamerScores.user_id = Users.id";
-
-    $query = "SELECT user_id,username, score, GamerScores.created from GamerScores join Users on GamerScores.user_id = Users.id";
     if ($d !== "lifetime") {
         //be very careful passing in a variable directly to SQL, I ensure it's a specific value from the in_array() above
         $query .= " WHERE GamerScores.created >= DATE_SUB(NOW(), INTERVAL 1 $d)";
     }
     //remember to prefix any ambiguous columns (Users and Scores both have created)
-
     $query .= " ORDER BY scoreState Desc, GamerScores.created desc LIMIT 10"; //newest of the same score is ranked higher
-
-    $query .= " ORDER BY score Desc, GamerScores.created desc LIMIT 10"; //newest of the same score is ranked higher
     error_log($query);
     $stmt = $db->prepare($query);
     $results = [];
@@ -190,21 +185,14 @@ function get_top_10($duration = "day")
 
 function get_best_score($user_id)
 {
-
     $query = "SELECT scoreState from GamerScores WHERE user_id = :id ORDER BY scoreState desc LIMIT 1";
-
-    $query = "SELECT score from GamerScores WHERE user_id = :id ORDER BY score desc LIMIT 1";
-
     $db = getDB();
     $stmt = $db->prepare($query);
     try {
         $stmt->execute([":id" => $user_id]);
         $r = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($r) {
-
             return (int)se($r, "scoreState", 0, false);
-
-            return (int)se($r, "score", 0, false);
         }
     } catch (PDOException $e) {
         error_log("Error fetching best score for user $user_id: " . var_export($e->errorInfo, true));
@@ -217,10 +205,7 @@ function get_latest_scores($user_id, $limit = 10)
     if ($limit < 1 || $limit > 50) {
         $limit = 10;
     }
-
     $query = "SELECT scoreState, created from GamerScores where user_id = :id ORDER BY created desc LIMIT :limit";
-
-    $query = "SELECT score, created from GamerScores where user_id = :id ORDER BY created desc LIMIT :limit";
     $db = getDB();
     //IMPORTANT: this is required for the execute to set the limit variables properly
     //otherwise it'll convert the values to a string and the query will fail since LIMIT expects only numerical values and doesn't cast
@@ -239,5 +224,4 @@ function get_latest_scores($user_id, $limit = 10)
     }
     return [];
 }
-
 ?>
