@@ -87,6 +87,26 @@ $username = get_username();
 ?>
 <div class="container-fluid">
     <h1>Profile</h1>
+    <div>
+        Best Score: <?php echo get_best_score($user_id); ?>
+    </div>
+    <div>
+        <?php $scores = get_latest_scores($user_id); ?>
+        <h3>Score History</h3>
+        <table class="table text-light">
+            <thead>
+                <th>Score</th>
+                <th>Time</th>
+            </thead>
+            <tbody>
+                <?php foreach ($scores as $score) : ?>
+                    <tr>
+                        <td><?php se($score, "score", 0); ?></td>
+                        <td><?php se($score, "created", "-"); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
     <form method="POST" onsubmit="return validate(this);">
         <div class="mb-3">
             <label class="form-label" for="email">Email</label>
