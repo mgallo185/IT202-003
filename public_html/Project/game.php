@@ -90,7 +90,7 @@ function isColliding(a, b) {
 let gameData  = {
  score: 0,
 }
-var lives = 3;
+var lives = 1;
 // The delay between enemies (in milliseconds)
 var timeBetweenEnemies = 5 * 1000;
 // ID to track the spawn timeout
@@ -133,27 +133,48 @@ function endGame() {
   context.font = '24px Arial';
   context.textAlign = 'center';
   context.fillText('Game Over. Final Score: ' + finalScore, canvas.width / 2, canvas.height / 2);
-
+if(gameData.score > 0){
   let data = {
   score :finalScore
  };
+$.ajax({
+type: "POST",
+url: "AJAX/save_score.php",
+contentType: "application/json",
+data: JSON.stringify({
+  data: data
+}),
+success: (resp,status,xhr) => {
+  console.log(resp,status,xhr);
+},
+error: (xhr,status,error) => {
+  console.log(xhr,status,error);
+}
+});
+}
 
-  //fetch api way
-  fetch("AJAX/save_score.php", {
-  method: "POST",
-  headers: {
-   "Content-type": "application/json",
-   "X-Requested-With": "XMLHttpRequest",
-  },
-  body: JSON.stringify({
-  "data": data
-  })
-  }).then(async res => {
-  let data = await res.json();
-   console.log("received data", data);
-   console.log("saved score");
+
+
+
+
+ // //fetch api way
+ // fetch("AJAX/save_score.php", {
+  //method: "POST",
+  //headers: {
+  // "Content-type": "application/json",
+  // "X-Requested-With": "XMLHttpRequest",
+  //},
+  //body: JSON.stringify({
+  //"data": data
+  //})
+  //}).then(async res => {
+  //let data = await res.json();
+  // console.log("received data", data);
+  // console.log("saved score");
    //window.location.reload(); //lazily reloading the page to get a new nonce for next game
-  })
+  //})
+
+
 }
 // Listen for keydown events
 canvas.addEventListener('keydown', function(event) {
