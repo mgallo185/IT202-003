@@ -217,7 +217,7 @@
   - [x] \(11/29/2021 of completion) Create functions that output the following scoreboards
   -  List of Evidence of Feature Completion
     - Status: Completed
-    - Direct Link: 
+    - Direct Link: https://mtg24-prod.herokuapp.com/lib/functions.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
     - Screenshots
