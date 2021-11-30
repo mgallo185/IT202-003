@@ -190,16 +190,16 @@
     - Screenshots
       - Screenshot #1
         -![image](https://user-images.githubusercontent.com/89924299/143814051-e89fcc01-6cd9-42e3-93fa-c5716c9f2d6a.png)
-      - This is the table for the scores with each recieved score being a new entry even if its from the same user
+      - Screenshot #1 This is the table for the scores with each recieved score being a new entry even if its from the same user
       -   Screenshot #2
         - ![image](https://user-images.githubusercontent.com/89924299/143900307-f5f3ffd7-63c6-4d3b-84ce-623272298652.png)
-      - The user is logged in and the score is saved shown in console.
+      - Screenshot #2: The user is logged in and the score is saved shown in console.
       -  Screenshot #3
         - ![image](https://user-images.githubusercontent.com/89924299/143900529-62413dca-9e77-476e-bae5-a381d48bcb79.png)
-      - After refreshing the page, a flash message is shown that the score is saved.
+      - Screenshot #3: After refreshing the page, a flash message is shown that the score is saved.
       - Screenshot #4
       - ![image](https://user-images.githubusercontent.com/89924299/143900806-86f7e2d1-ce15-4600-bd4f-b2f0d42cc043.png)
-      - After someone who is not logged in plays the game and gets a score above 0 and refreshes the page. A flash message appears stating they need to be logged in for the score to save. 
+      - Screenshot #4: After someone who is not logged in plays the game and gets a score above 0 and refreshes the page. A flash message appears stating they need to be logged in for the score to save. 
       
   - [x] \(11/29/2021 of completion) The user will be able to see their last 10 scores
   -  List of Evidence of Feature Completion
