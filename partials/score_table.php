@@ -2,21 +2,21 @@
 //requires functions.php
 //requires a duration to be set
 if (!isset($duration)) {
-    $duration = "day"; //choosing to default to day
+    $duration = "daily"; //choosing to default to day
 }
 $results = get_top_10($duration);
 
 switch ($duration) {
-    case "day":
+    case "daily":
         $title = "Top Scores Today";
         break;
-    case "week":
+    case "weekly":
         $title = "Top Scores This Week";
         break;
-    case "month":
+    case "monthly":
         $title = "Top Scores This Month";
         break;
-    case "lifetime":
+    case "lifetimely":
         $title = "All Time Top Scores";
         break;
     default:
