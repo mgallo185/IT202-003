@@ -220,6 +220,7 @@
     - Direct Link: https://mtg24-prod.herokuapp.com/Project/home.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
+      - PR Link #2: https://github.com/mgallo185/IT202-003/pull/73
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/143928304-db089f49-2731-4363-95ed-93d91f9b9cfc.png)
         - Screenshot #1 description: function of scoreboards for day, week, month, and year, all in one function with the limit of 10 results
