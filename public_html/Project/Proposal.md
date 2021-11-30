@@ -190,6 +190,7 @@
     - Screenshots
       - Screenshot #1
         -![image](https://user-images.githubusercontent.com/89924299/143814051-e89fcc01-6cd9-42e3-93fa-c5716c9f2d6a.png)
+
       - Screenshot #1 This is the table for the scores with each recieved score being a new entry even if its from the same user
       -   Screenshot #2
         - ![image](https://user-images.githubusercontent.com/89924299/143900307-f5f3ffd7-63c6-4d3b-84ce-623272298652.png)
