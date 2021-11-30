@@ -1,3 +1,3 @@
 <?php
 
-die(header("Location: login.php"));
+die(header("Location: Project/login.php"));

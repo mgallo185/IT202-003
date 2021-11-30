@@ -190,16 +190,17 @@
     - Screenshots
       - Screenshot #1
         -![image](https://user-images.githubusercontent.com/89924299/143814051-e89fcc01-6cd9-42e3-93fa-c5716c9f2d6a.png)
-      - This is the table for the scores with each recieved score being a new entry even if its from the same user
+
+      - Screenshot #1 This is the table for the scores with each recieved score being a new entry even if its from the same user
       -   Screenshot #2
         - ![image](https://user-images.githubusercontent.com/89924299/143900307-f5f3ffd7-63c6-4d3b-84ce-623272298652.png)
-      - The user is logged in and the score is saved shown in console.
+      - Screenshot #2: The user is logged in and the score is saved shown in console.
       -  Screenshot #3
-      -   ![image](https://user-images.githubusercontent.com/89924299/143900529-62413dca-9e77-476e-bae5-a381d48bcb79.png)
-      - After refreshing the page, a flash message is shown that the score is saved.
+        - ![image](https://user-images.githubusercontent.com/89924299/143900529-62413dca-9e77-476e-bae5-a381d48bcb79.png)
+      - Screenshot #3: After refreshing the page, a flash message is shown that the score is saved.
       - Screenshot #4
       - ![image](https://user-images.githubusercontent.com/89924299/143900806-86f7e2d1-ce15-4600-bd4f-b2f0d42cc043.png)
-      - After someone who is not logged in plays the game and gets a score above 0 and refreshes the page. A flash message appears stating they need to be logged in for the score to save. 
+      - Screenshot #4: After someone who is not logged in plays the game and gets a score above 0 and refreshes the page. A flash message appears stating they need to be logged in for the score to save. 
       
   - [x] \(11/29/2021 of completion) The user will be able to see their last 10 scores
   -  List of Evidence of Feature Completion
@@ -220,6 +221,7 @@
     - Direct Link: https://mtg24-prod.herokuapp.com/Project/home.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
+      - PR Link #2: https://github.com/mgallo185/IT202-003/pull/73
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/143928304-db089f49-2731-4363-95ed-93d91f9b9cfc.png)
         - Screenshot #1 description: function of scoreboards for day, week, month, and year, all in one function with the limit of 10 results
