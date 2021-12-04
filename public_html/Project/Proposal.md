@@ -320,7 +320,6 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
- 
   - [ ] \(mm/dd/yyyy of completion) User will be able to see their competition history
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -330,6 +329,8 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
+
+
   - [ ] \(mm/dd/yyyy of completion) User with the role of “admin” can edit a competition where paid_out = false
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -339,6 +340,8 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
+
+
   - [ ] \(mm/dd/yyyy of completion) Add pagination to the Active Competitions view
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
