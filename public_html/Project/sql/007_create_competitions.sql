@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS C(
+CREATE TABLE IF NOT EXISTS Competitions(
     -- Remember to refer to your proposal for your exact columns
     id int AUTO_INCREMENT PRIMARY KEY,
     title varchar(240) not null,
@@ -10,10 +10,7 @@ CREATE TABLE IF NOT EXISTS C(
     starting_reward int DEFAULT 1,
     current_reward int DEFAULT (starting_reward),
     paid_out tinyint(1) DEFAULT 0,
-
-
     did_calc TINYINT(1) DEFAULT 0,
-    duration int default 3,
     creator_id int,
     min_score int DEFAULT 1,
 
@@ -32,6 +29,6 @@ CREATE TABLE IF NOT EXISTS C(
     check (current_reward >= starting_reward),
     check (min_participants >= 3),
     check (current_participants >= 0),
-    check(join_cost >= 0)
+    check(join_fee >= 0),
     check (first_place + second_place + third_place = 100)
 )
