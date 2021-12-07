@@ -1,9 +1,4 @@
 # Project Name: Simple Arcade
-## Project Summary: (Copy from proposal)
-## Github Link: (Prod Branch of Project Folder)
-## Project Board Link: 
-## Website Link: (Heroku Prod of Project folder)
-## Your Name:
 ## Project Summary: This project will create a simple Arcade with scoreboards and competitions based on the implemented game.
 ## Github Link: https://github.com/mgallo185/IT202-003/tree/prod/public_html/Project
 ## Project Board Link: https://github.com/mgallo185/IT202-003/projects/1 
@@ -232,7 +227,6 @@
         - Screenshot #1 description: function of scoreboards for day, week, month, and year, all in one function with the limit of 10 results
         - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/143966916-8512bb99-351f-4b88-8baa-9c0287bde773.png)
         - Screenshot #2 description:  Scoreboards shown on home page.
-
 - Milestone 3
    - [ ] \(mm/dd/yyyy of completion) Users will have points associated with their account.
   -  List of Evidence of Feature Completion
@@ -288,12 +282,12 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-  - [x] \(12/01/2021 of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
+  - [ ] \(mm/dd/yyyy of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
-    - Status: Completed
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1: https://github.com/mgallo185/IT202-003/pull/75
+      - PR link #1 (repeat as necessary)
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
