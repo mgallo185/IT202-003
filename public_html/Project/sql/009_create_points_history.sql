@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS PointsHistory
     user_id    int,
     point_change  int,
      reason int,
-     SUM point_change, 
+     SELECT SUM(point_change) AS  totalPoints FROM Users;
     created   timestamp default current_timestamp,
     modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
    
