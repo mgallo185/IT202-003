@@ -287,6 +287,7 @@ function join_competition($comp_id, $user_id, $cost)
         if ($balance >= $cost) {
             $db = getDB();
             $stmt = $db->prepare("SELECT title, join_fee from Competitions where id = :id");
+
             try {
                 $stmt->execute([":id" => $comp_id]);
                 $r = $stmt->fetch(PDO::FETCH_ASSOC);
