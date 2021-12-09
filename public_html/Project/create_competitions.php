@@ -14,20 +14,25 @@ try {
     flash("There was a problem fetching first, second, third place options", "danger");
     error_log("Error Getting Places: " . var_export($e, true));
 }
-//save
+
 if (isset($_POST["title"]) && !empty($_POST["title"])) {
-    $cost = (int)se($_POST, "start_reward", 0, false);
+    $cost = (int)se($_POST, "starting_reward", 0, false);
     $cost++;
-    $cost += (int)se($_POST, "join_fee", 0, false);
+    $cost += (int)se($_POST, "join_cost", 0, false);
     $title = se($_POST, "title", "N/A", false);
-    //$balance = get_account_balance();
-     if ($balance >= $cost) {
+    $points = 
+//save
+/* if (isset($_POST["title"]) && !empty($_POST["title"])) {
+    $cost = $_POST["starting_reward"];
+    $title = se($_POST, "title", "N/A", false);
+    $balance = get_account_balance();
+    if ($balance >= $cost) {
         $db->beginTransaction();
         if (change_bills($cost, "create_comp", get_user_account_id(), -1, "Create Competition $title")) {
             $_POST["creator_id"] = get_user_id();
-            $comp_id = save_data("Competitions", $_POST);
+            $comp_id = save_data("BGD_Competitions", $_POST);
             if ($comp_id > 0) {
-                if (add_to_competition($comp_id, get_user_id())) {
+                if (join_competition($comp_id, get_user_id())) {
                     flash("Successfully created competition", "success");
                     $db->commit();
                 } else {
@@ -43,11 +48,10 @@ if (isset($_POST["title"]) && !empty($_POST["title"])) {
     } else {
         flash("You can't afford this right now", "warning");
     }
-    
 }
 
+*/
 ?>
-
 <div class="container-fluid">
     <h1>Create Competition</h1>
     <form method="POST">
@@ -100,5 +104,5 @@ if (isset($_POST["title"]) && !empty($_POST["title"])) {
     </script>
 </div>
 <?php
-
+require(__DIR__ . "/../../partials/footer.php");
 ?>

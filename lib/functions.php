@@ -200,6 +200,14 @@ function get_best_score($user_id)
     return 0;
 }
 
+function get_user_points()
+{
+    if (is_logged_in() && isset($_SESSION["user"])) {
+        return (int)se($_SESSION["user"], "points", 0, false);
+    }
+    return 0;
+}
+
 function get_latest_scores($user_id, $limit = 10)
 {
     if ($limit < 1 || $limit > 50) {
@@ -223,5 +231,103 @@ function get_latest_scores($user_id, $limit = 10)
         error_log("Error getting latest $limit scores for user $user_id: " . var_export($e->errorInfo, true));
     }
     return [];
+}
+
+
+function change_points($points, $reason)
+{
+    //I'm choosing to ignore the record of 0 point transactions
+    if ($points > 0) {
+        $query = "INSERT INTO PointsHistory (points, reason) 
+            VALUES (:pc, :r), 
+            (:pc2, :r)";
+        //I'll insert both records at once, note the placeholders kept the same and the ones changed.
+         $params[":r"] = $reason;
+        $params[":pc"] = ($points * -1);
+
+        $params[":pc2"] = $points;
+        $db = getDB();
+        $stmt = $db->prepare($query);
+        error_log("Transfering");
+        try {
+            $stmt->execute($params);
+            error_log("transaction complete");
+            return true;
+        } catch (PDOException $e) {
+            error_log(var_export($e->errorInfo, true));
+            flash("Transfer error occurred: " . var_export($e->errorInfo, true), "danger");
+        }
+        return false;
+    }
+}
+
+
+
+
+
+function update_participants($comp_id)
+{
+    $db = getDB();
+    $stmt = $db->prepare("UPDATE Competitions set current_participants = (SELECT IFNULL(COUNT(1),0) FROM CompetitionParticipants WHERE comp_id = :cid), 
+    current_reward = IF(join_fee > 0, current_reward + CEILING(join_fee * 0.5), current_reward) WHERE id = :cid");
+    try {
+        $stmt->execute([":cid" => $comp_id]);
+        return true;
+    } catch (PDOException $e) {
+        error_log("Update competition participant error: " . var_export($e, true));
+    }
+    return false;
+}
+
+
+function join_competition($comp_id, $user_id, $cost)
+{
+    $balance = get_user_points();
+    if ($comp_id > 0) {
+        if ($balance >= $cost) {
+            $db = getDB();
+            $stmt = $db->prepare("SELECT title, join_cost from BGD_Competitions where id = :id");
+            try {
+                $stmt->execute([":id" => $comp_id]);
+                $r = $stmt->fetch(PDO::FETCH_ASSOC);
+                if ($r) {
+                    $cost = (int)se($r, "join_cost", 0, false);
+                    $name = se($r, "title", "", false);
+                    if ($balance >= $cost) {
+                        if (change_points($cost, "join-comp", get_user_id(), -1, "Joining competition $name")) {
+                            if (add_to_competition($comp_id, $user_id)) {
+                                flash("Successfully joined $name", "success");
+                            }
+                        } else {
+                            flash("Failed to pay for competition", "danger");
+                        }
+                    } else {
+                        flash("You can't afford to join this competition", "warning");
+                    }
+                }
+            } catch (PDOException $e) {
+                error_log("Comp lookup error " . var_export($e, true));
+                flash("There was an error looking up the competition", "danger");
+            }
+        } else {
+            flash("You can't afford to join this competition", "warning");
+        }
+    } else {
+        flash("Invalid competition, please try again", "danger");
+    }
+}
+
+function add_to_competition($comp_id, $user_id)
+{
+    $db = getDB();
+    $stmt = $db->prepare("INSERT INTO CompetitionParticipants (user_id, comp_id) VALUES (:uid, :cid)");
+    try {
+        $stmt->execute([":uid" => $user_id, ":cid" => $comp_id]);
+        update_participants($comp_id);
+        return true;
+    } catch (PDOException $e) {
+        error_log("Join Competition error: " . var_export($e, true));
+    }
+    return false;
 }
 ?>
