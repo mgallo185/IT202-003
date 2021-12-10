@@ -286,12 +286,12 @@ function join_competition($comp_id, $user_id, $cost)
     if ($comp_id > 0) {
         if ($balance >= $cost) {
             $db = getDB();
-            $stmt = $db->prepare("SELECT title, join_cost from BGD_Competitions where id = :id");
+            $stmt = $db->prepare("SELECT title, join_fee from Competitions where id = :id");
             try {
                 $stmt->execute([":id" => $comp_id]);
                 $r = $stmt->fetch(PDO::FETCH_ASSOC);
                 if ($r) {
-                    $cost = (int)se($r, "join_cost", 0, false);
+                    $cost = (int)se($r, "join_fee", 0, false);
                     $name = se($r, "title", "", false);
                     if ($balance >= $cost) {
                         if (change_points($cost, "join-comp", get_user_id(), -1, "Joining competition $name")) {
@@ -329,5 +329,120 @@ function add_to_competition($comp_id, $user_id)
         error_log("Join Competition error: " . var_export($e, true));
     }
     return false;
+}
+
+function save_data($table, $data, $ignore = ["submit"])
+{
+    $table = se($table, null, null, false);
+    $db = getDB();
+    $query = "INSERT INTO $table "; //be sure you trust $table
+    //https://www.php.net/manual/en/functions.anonymous.php Example#3
+    $columns = array_filter(array_keys($data), function ($x) use ($ignore) {
+        return !in_array($x, $ignore); // $x !== "submit";
+    });
+    //arrow function uses fn and doesn't have return or { }
+    //https://www.php.net/manual/en/functions.arrow.php
+    $placeholders = array_map(fn ($x) => ":$x", $columns);
+    $query .= "(" . join(",", $columns) . ") VALUES (" . join(",", $placeholders) . ")";
+
+    $params = [];
+    foreach ($columns as $col) {
+        $params[":$col"] = $data[$col];
+    }
+    $stmt = $db->prepare($query);
+    try {
+        $stmt->execute($params);
+        //https://www.php.net/manual/en/pdo.lastinsertid.php
+        //echo "Successfully added new record with id " . $db->lastInsertId();
+        return $db->lastInsertId();
+    } catch (PDOException $e) {
+        //echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
+        flash("<pre>" . var_export($e->errorInfo, true) . "</pre>");
+        return -1;
+    }
+}
+function update_data($table, $id,  $data, $ignore = ["id", "submit"])
+{
+    $columns = array_keys($data);
+    foreach ($columns as $index => $value) {
+        //Note: normally it's bad practice to remove array elements during iteration
+
+        //remove id, we'll use this for the WHERE not for the SET
+        //remove submit, it's likely not in your table
+        if (in_array($value, $ignore)) {
+            unset($columns[$index]);
+        }
+    }
+    $query = "UPDATE $table SET "; //be sure you trust $table
+    $cols = [];
+    foreach ($columns as $index => $col) {
+        array_push($cols, "$col = :$col");
+    }
+    $query .= join(",", $cols);
+    $query .= " WHERE id = :id";
+
+    $params = [":id" => $id];
+    foreach ($columns as $col) {
+        $params[":$col"] = se($data, $col, "", false);
+    }
+    $db = getDB();
+    $stmt = $db->prepare($query);
+    try {
+        $stmt->execute($params);
+        return true;
+    } catch (PDOException $e) {
+        flash("<pre>" . var_export($e->errorInfo, true) . "</pre>");
+        return false;
+    }
+}
+
+function paginate($query, $params = [], $per_page = 10)
+{
+    global $page; //will be available after function is called
+    try {
+        $page = (int)se($_GET, "page", 1, false);
+    } catch (Exception $e) {
+        //safety for if page is received as not a number
+        $page = 1;
+    }
+    $db = getDB();
+    $stmt = $db->prepare($query);
+    try {
+        $stmt->execute($params);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log("paginate error: " . var_export($e, true));
+    }
+    $total = 0;
+    if (isset($result)) {
+        $total = (int)se($result, "total", 0, false);
+    }
+    global $total_pages; //will be available after function is called
+    $total_pages = ceil($total / $per_page);
+    global $offset; //will be available after function is called
+    $offset = ($page - 1) * $per_page;
+}
+
+function persistQueryString($page)
+{
+    $_GET["page"] = $page;
+    return http_build_query($_GET);
+}
+
+
+
+function redirect($path)
+{ //header headache
+    //https://www.php.net/manual/en/function.headers-sent.php#90160
+    /*headers are sent at the end of script execution otherwise they are sent when the buffer reaches it's limit and emptied */
+    if (!headers_sent()) {
+        //php redirect
+        die(header("Location: " . get_url($path)));
+    }
+    //javascript redirect
+    echo "<script>window.location.href='" . get_url($path) . "';</script>";
+    //metadata redirect (runs if javascript is disabled)
+    echo "<noscript><meta http-equiv=\"refresh\" content=\"0;url=" . get_url($path) . "\"/></noscript>";
+    die();
 }
 ?>
