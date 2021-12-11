@@ -200,6 +200,7 @@ function get_best_score($user_id)
     return 0;
 }
 
+
 function get_latest_scores($user_id, $limit = 10)
 {
     if ($limit < 1 || $limit > 50) {
@@ -224,4 +225,66 @@ function get_latest_scores($user_id, $limit = 10)
     }
     return [];
 }
+//Milestone 3 functions 
+function change_points($points, $reason, $id){
+    if($points > 0){
+        $query = "INSERT INTO PointsHistory(user_id, point_change,reason)
+        VALUES(:uid, :pc, :r)";
+
+        $params[":uid"] = $id;
+        $params[":pc"] = $points;
+        $params[":r"] = $reason;
+        $db = getDB();
+        $stmt = $db->prepare($query);
+        try {
+            $stmt-> execute($params);
+            points_update();
+            get_user();
+            return true;
+        } catch (PDOException $e){
+            flash("Transfer error occured: " . var_export($e-> errorInfo, true), "danger");
+        }
+    }
+}
+
+function points_update()
+{
+    if(is_logged_in()){
+        $query = "UPDATE Users SET points = (SELECT IFNULL(SUM(point_change), 0) from PointsHistory WHERE user_id = :uid) where id = :uid";
+        $db = getDB();
+        $stmt = $db->prepare($query);
+        try{
+            $stmt->execute([":uid"=> get_user_id()]);
+
+        } catch(PDOException $e){
+            flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
+        }
+    }
+}
+
+
+function get_user()
+{
+    if(is_logged_in()){
+        $user = ["id"=> -1, "points"=>0];
+        $query = "SELECT id, points from Users where id = :uid LIMIT 1";
+        $db= getDB();
+        $stmt = $db-> prepare($query);
+        try{
+            $stmt -> execute([":uid" => get_user_id()]);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            $user = $result;
+            $user["id"] = $result["id"];
+            $user["points"] = $result["points"];
+        } catch(PDOException $e){
+            flash("Technical error: " . var_export($e->errorInfo,true), "danger");
+        }
+        $_SESSION["user"]["points"] = $user;
+    } else{
+        flash("you're not logged in", "danger");
+    }
+}
+
+
+
 ?>

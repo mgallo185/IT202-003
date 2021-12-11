@@ -91,6 +91,10 @@ $user_id = get_user_id()
     <div>
         Best Score: <?php echo get_best_score($user_id); ?>
     </div>
+
+    <div>
+        Best Score: <?php echo change_points($points,$reason,$user_id); ?>
+    </div>
     <div>
         <?php $scores = get_latest_scores($user_id); ?>
         <h3>Score History</h3>
