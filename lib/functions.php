@@ -224,4 +224,13 @@ function get_latest_scores($user_id, $limit = 10)
     }
     return [];
 }
+
+function get_user_points()
+{
+    if (is_logged_in() && isset($_SESSION["user"])) {
+        return (int)se($_SESSION["user"], "points", 0, false);
+    }
+    return 0;
+}
+
 ?>
