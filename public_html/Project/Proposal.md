@@ -228,33 +228,35 @@
         - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/143966916-8512bb99-351f-4b88-8baa-9c0287bde773.png)
         - Screenshot #2 description:  Scoreboards shown on home page.
 - Milestone 3
-   - [ ] \(mm/dd/yyyy of completion) Users will have points associated with their account.
+   - [x] \(12/10/2021 of completion) Users will have points associated with their account.
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Incomplete
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(mm/dd/yyyy of completion) Create a PointsHistory table (id, user_id, point_change, reason, created)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145664182-17fbc77f-6205-47c2-ba2a-347a086c4871.png))
+        - Screenshot #1 description: Added points with a default value of 0 to the Users table
+        - Screenshot 2: Points on profile page
+  - [x] \(12/10/2021 of completion) Create a PointsHistory table (id, user_id, point_change, reason, created)
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Incomplete
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(mm/dd/yyyy of completion) Competitions table should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145664248-0237559f-e8e6-4e61-8d8d-9fe2981222e3.png)
+        - Screenshot #1 description: PointsHistory Table
+  - [x] \(12/9/2021 of completion) Competitions table should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Completed
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1 https://github.com/mgallo185/IT202-003/pull/91/
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/145664347-12235ca7-5644-48f5-a866-36e7dcafd57f.png)
+
+        - Screenshot #1 description: Competitons table
   - [ ] \(mm/dd/yyyy of completion) User will be able to create a competition
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -282,7 +284,7 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(mm/dd/yyyy of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
+  - [x] \(12/09/2021 of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
