@@ -228,16 +228,17 @@
         - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/143966916-8512bb99-351f-4b88-8baa-9c0287bde773.png)
         - Screenshot #2 description:  Scoreboards shown on home page.
 - Milestone 3
-   - [x] \(12/10/2021 of completion) Users will have points associated with their account.
+   - [x] (12/10/2021 of completion) Users will have points associated with their account.
   -  List of Evidence of Feature Completion
-    - Status: Incomplete
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Complete
+    - Direct Link: https://mtg24-dev.herokuapp.com/Project/profile.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/90
     - Screenshots
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145664182-17fbc77f-6205-47c2-ba2a-347a086c4871.png))
         - Screenshot #1 description: Added points with a default value of 0 to the Users table
-        - Screenshot 2: Points on profile page
+        - Screenshot 2: ![image](https://user-images.githubusercontent.com/89924299/145692207-5534542c-5f78-46c5-9173-c3ed441caa20.png)
+        - Screenshot #2: User points on profile page
   - [x] \(12/10/2021 of completion) Create a PointsHistory table (id, user_id, point_change, reason, created)
   -  List of Evidence of Feature Completion
     - Status: Incomplete
