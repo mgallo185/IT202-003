@@ -29,8 +29,7 @@ if (isset($_POST["save"])) {
         }
     }
     //select fresh data from table
-    $stmt = $db->prepare("SELECT id, email, IFNULL(username, email) as `username`, points, from Users where id = :id LIMIT 1");
-
+    $stmt = $db->prepare("SELECT id, email, IFNULL(username, email) as `username` from Users where id = :id LIMIT 1");
     try {
         $stmt->execute([":id" => get_user_id()]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -91,8 +90,10 @@ $user_id = get_user_id()
     <h1>Profile</h1>
     <div>
         Best Score: <?php echo get_best_score($user_id); ?>
-        Best poins: <?php echo get_user_points($user_id); ?>
-        
+    </div>
+
+    <div>
+        Points: <?php echo get_user_points(); ?>
     </div>
     <div>
         <?php $scores = get_latest_scores($user_id); ?>
