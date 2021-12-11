@@ -258,7 +258,7 @@
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/145664347-12235ca7-5644-48f5-a866-36e7dcafd57f.png)
 
         - Screenshot #1 description: Competitons table
-  - [ ] \(mm/dd/yyyy of completion) User will be able to create a competition
+  - [ ] \(12/10/2021 of completion) User will be able to create a competition
   -  List of Evidence of Feature Completion
     - Status: Paritally Working 
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -267,7 +267,7 @@
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/145691819-421f39b1-54a2-41ad-92fc-d01b66daa094.png)
         - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(mm/dd/yyyy of completion)Each new participant causes the Reward value to increase by at least 1 or 50% of the joining fee rounded up
+  - [ ] \(12/10/2021 of completion)Each new participant causes the Reward value to increase by at least 1 or 50% of the joining fee rounded up
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -276,7 +276,7 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(mm/dd/yyyy of completion)Have a page where the User can see active competitions (not expired)
+  - [ ] \(12/10/2021 of completion)Have a page where the User can see active competitions (not expired)
   -  List of Evidence of Feature Completion
     - Status: Partially Working 
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -294,7 +294,7 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-    - [ ] \(mm/dd/yyyy of completion) User can join active competitions 
+    - [ ] \(12/10/2021 of completion) User can join active competitions 
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
@@ -304,7 +304,7 @@
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
         - 
-  - [ ] \(mm/dd/yyyy of completion) Create function that calculates competition winners
+  - [ ] \(12/10/2021 of completion) Create function that calculates competition winners
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
