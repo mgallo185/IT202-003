@@ -1,8 +1,6 @@
 <?php
 require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
-?>
-<?php
 $payout_options = [];
 $db = getDB();
 $stmt = $db->prepare("SELECT id, CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM Competitions");
@@ -25,7 +23,7 @@ if (isset($_POST["title"]) && !empty($_POST["title"])) {
     $balance = get_user_points();
     if ($balance >= $cost) {
         $db->beginTransaction();
-        if (change_points($cost, "create_comp", get_user_id(), -1, "Create Competition $title")) {
+        if (change_points($cost, "create_comp", get_user(), -1, "Create Competition $title")) {
             $_POST["creator_id"] = get_user_id();
             $comp_id = save_data("Competitions", $_POST);
             if ($comp_id > 0) {
@@ -53,7 +51,7 @@ if (isset($_POST["title"]) && !empty($_POST["title"])) {
     <form method="POST">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input id= "title" name="title" class="form-control" />
+            <input id="title" name="title" class="form-control" />
         </div>
         <div class="mb-3">
             <label for="reward" class="form-label">Starting Reward</label>
@@ -99,3 +97,6 @@ if (isset($_POST["title"]) && !empty($_POST["title"])) {
         }
     </script>
 </div>
+<?php
+require(__DIR__ . "/../../partials/flash.php");
+?>

@@ -238,33 +238,60 @@ function refresh_user_points()
 {
     if (is_logged_in()) {
         //cache account balance via BGD_Bills_History history
-        $query = "UPDATE Users set points = (SELECT IFNULL(SUM(point_change), 0) from PointsHistory";
+        $query = "UPDATE Users set points = (SELECT IFNULL(SUM(point_change), 0) from PointsHistory WHERE user_id = :uid) where id = :uid";
         $db = getDB();
         $stmt = $db->prepare($query);
         try {
-            get_user_id(); //refresh session data
+            $stmt-> execute([":uid" => get_user_id()]); //refresh session data
         } catch (PDOException $e) {
             flash("Error refreshing account: " . var_export($e->errorInfo, true), "danger");
         }
     }
 }
 
+function get_user()
+{
+
+    if (is_logged_in()) {
+        //let's define our data structure first
+        //id is for internal references, account_number is user facing info, and balance will be a cached value of activity
+        $user = ["id" => -1, "points" =>0];
+        //this should always be 0 or 1, but being safe
+        $query = "SELECT id, points from Users where id = :uid LIMIT 1";
+        $db = getDB();
+        $stmt = $db->prepare($query);
+        try {
+            $stmt->execute([":uid" => get_user_id()]);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            $user = $result;
+            $user["id"] = $result["id"];
+            $user["points"] =$result["points"];
+
+        } catch (PDOException $e) {
+            flash("Technical error: " . var_export($e-> errorInfo. true), "danger" );
+        }
+        $_SESSION["user"]["points"] = $user;
+    } else {
+        flash( "You're not logged in", "danger");
+    }
+           
+}
+    
 
 
 
-
-function change_points($points, $reason)
+function change_points($points, $reason,$id)
 {
     //I'm choosing to ignore the record of 0 point transactions
     if ($points > 0) {
-        $query = "INSERT INTO PointsHistory (points, reason) 
-            VALUES (:pc, :r), 
-            (:pc2, :r)";
+        $query = "INSERT INTO PointsHistory (user_id, point_change, reason) 
+            VALUES (:uid, :pc, :r)";
+    
         //I'll insert both records at once, note the placeholders kept the same and the ones changed.
          $params[":r"] = $reason;
-        $params[":pc"] = ($points * -1);
+        $params[":pc"] = ($points);
+        $params[":uid"] = ($id);
 
-        $params[":pc2"] = $points;
         $db = getDB();
         $stmt = $db->prepare($query);
         error_log("Transfering");
