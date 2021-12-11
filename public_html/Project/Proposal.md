@@ -287,13 +287,13 @@
         - Screenshot #1 description explaining what you're trying to show
   - [x] \(12/09/2021 of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
-    - Status: Partially Working 
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed 
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/sql/init_db.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/100
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145692646-1d1eebf7-6fee-45bd-8555-b4b3a69101a9.png)
+        - Screenshot #1 description: Table of Competition Participants
     - [ ] \(12/10/2021 of completion) User can join active competitions 
   -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
