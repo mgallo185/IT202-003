@@ -67,7 +67,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                             Competitions
                         </a>
                         <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
-                            <li><a class="dropdown-item" href="<?php echo get_url('create_competition.php'); ?>">Create</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('create_competitions.php'); ?>">Create</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('list_competitions.php'); ?>">Active</a></li>
                         </ul>
                     </li>
