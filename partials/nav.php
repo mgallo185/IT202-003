@@ -36,7 +36,7 @@ require_once(__DIR__ . "/../lib/functions.php");
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navContent">
-            < class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <?php if (is_logged_in()) : ?>
 
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('profile.php'); ?>">Profile</a></li>
@@ -60,8 +60,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                 <?php if (is_logged_in()) : ?>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('logout.php'); ?>">Logout</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo get_url('game.php'); ?>">Play Game</a></li>
-                     <li><a class="nav-tem" href="<?php echo get_url('create_competition.php'); ?>">Create</a></li>
-                            <li><a class="nav-item" href="<?php echo get_url('list_competitions.php'); ?>">Active</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo get_url('create_competitions.php'); ?>">Play Game</a></li>
                 <?php endif; ?>
             </ul>
         </div>
