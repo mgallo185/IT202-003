@@ -243,7 +243,6 @@
         - Screenshot #2: User points on profile page
 
 
-
   - [x] \(12/10/2021 of completion) Create a PointsHistory table (id, user_id, point_change, reason, created)
   -  List of Evidence of Feature Completion
     - Status: Complete
@@ -252,7 +251,7 @@
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/95/
     - Screenshots
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145664248-0237559f-e8e6-4e61-8d8d-9fe2981222e3.png)
-        - Screenshot #1 description: PointsHistory Table
+        - Screenshot #1 description: PointsHistory Table. 
 
 
   - [x] \(12/9/2021 of completion) Competitions table should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
@@ -269,21 +268,23 @@
   - [ ] \(12/10/2021 of completion) User will be able to create a competition
   -  List of Evidence of Feature Completion
     - Status: Paritally Working 
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link:https://mtg24-prod.herokuapp.com/Project/create_competitions.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/96
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/145691819-421f39b1-54a2-41ad-92fc-d01b66daa094.png)
-        - Screenshot #1 description explaining what you're trying to show
+        - Screenshot #1 description explaining what you're trying to show: On this page, the user will be able to create a competition
+
+
   - [ ] \(12/10/2021 of completion)Each new participant causes the Reward value to increase by at least 1 or 50% of the joining fee rounded up
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Partially Working
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/create_competitions.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/96
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/145698146-a4fd0c75-e6e7-4076-9bff-80cd57817c23.png)
+        - Screenshot #1 description explaining what you're trying to show: This function updates participants and increases the reward value by 50%
   - [x] \(12/10/2021 of completion)Have a page where the User can see active competitions (not expired)
   -  List of Evidence of Feature Completion
     - Status: Partially Working 
@@ -316,7 +317,7 @@
   - [] \(12/10/2021 of completion) Create function that calculates competition winners
   -  List of Evidence of Feature Completion
     - Status: Partially Working
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link:  https://mtg24-prod.herokuapp.com/Project/list_competitions.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/101
     - Screenshots
