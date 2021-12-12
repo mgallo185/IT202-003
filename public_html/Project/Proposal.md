@@ -1,4 +1,9 @@
 # Project Name: Simple Arcade
+## Project Summary: (Copy from proposal)
+## Github Link: (Prod Branch of Project Folder)
+## Project Board Link: 
+## Website Link: (Heroku Prod of Project folder)
+## Your Name:
 ## Project Summary: This project will create a simple Arcade with scoreboards and competitions based on the implemented game.
 ## Github Link: https://github.com/mgallo185/IT202-003/tree/prod/public_html/Project
 ## Project Board Link: https://github.com/mgallo185/IT202-003/projects/1 
@@ -228,7 +233,6 @@
         - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/143966916-8512bb99-351f-4b88-8baa-9c0287bde773.png)
         - Screenshot #2 description:  Scoreboards shown on home page.
 
-
 - Milestone 3
    - [x] (12/10/2021 of completion) Users will have points associated with their account.
   -  List of Evidence of Feature Completion
@@ -294,6 +298,7 @@
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/145691859-06fd4929-a934-4798-9e37-fbf763774b33.png)
         - Screenshot #1 description explaining what you're trying to show
+
   - [x] \(12/09/2021 of completion) Will need an association table CompetitionParticipants (id, comp_id, user_id, created)
   -  List of Evidence of Feature Completion
     - Status: Completed 
