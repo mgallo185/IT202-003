@@ -284,10 +284,10 @@
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
         - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(12/10/2021 of completion)Have a page where the User can see active competitions (not expired)
+  - [x] \(12/10/2021 of completion)Have a page where the User can see active competitions (not expired)
   -  List of Evidence of Feature Completion
     - Status: Partially Working 
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/list_competitions.php
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
@@ -302,25 +302,30 @@
     - Screenshots
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145692646-1d1eebf7-6fee-45bd-8555-b4b3a69101a9.png)
         - Screenshot #1 description: Table of Competition Participants
-    - [ ] \(12/10/2021 of completion) User can join active competitions 
+    - [x] \(12/10/2021 of completion) User can join active competitions 
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Complete
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/list_competitions.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: - PR link #1: https://github.com/mgallo185/IT202-003/pull/101
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145697045-b46a4822-3e24-4d65-a1d6-a8a9cd687858.png)
+
+        - Screenshot #1 description explaining what you're trying to show: My function for the users to join active competitions
         - 
-  - [ ] \(12/10/2021 of completion) Create function that calculates competition winners
+  - [] \(12/10/2021 of completion) Create function that calculates competition winners
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Partially Working
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/101
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+    - Screenshot #1: ![calc_winner1](https://user-images.githubusercontent.com/89924299/145696910-98546553-4c67-4d46-a884-1894f18bdb1a.PNG)
+
+    - Screenshot #1 description: Function Calc Winner Part 1
+      - Screenshot #2: ![calc_winner2](https://user-images.githubusercontent.com/89924299/145696889-c237c27d-9019-4562-8fc4-767b9e9236e1.png)
+
+        - Screenshot #2 description explaining what you're trying to show: Function Calc Winner Part 2.
  
 - Milestone 4
 ### Intructions
