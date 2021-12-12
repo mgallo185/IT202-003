@@ -14,6 +14,13 @@ try {
     flash("There was a problem fetching first, second, third place options", "danger");
     error_log("Error Getting Places: " . var_export($e, true));
 }
+
+if (isset($_POST["title"]) && !empty($_POST["title"])) {
+    $cost = (int)se($_POST, "starting_reward", 0, false);
+    $cost++;
+    $cost += (int)se($_POST, "join_cost", 0, false);
+    $title = se($_POST, "title", "N/A", false);
+    $points = 
 //save
 /* if (isset($_POST["title"]) && !empty($_POST["title"])) {
     $cost = $_POST["starting_reward"];
