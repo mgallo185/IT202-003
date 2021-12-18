@@ -166,7 +166,6 @@
 
                
 
-- Milestone 2
   - [x] \(11/16/2021 of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator
   -  List of Evidence of Feature Completion
     - Status: Completed
@@ -363,14 +362,17 @@
       - PR link #1 (repeat as necessary)
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-  - [ ] \(mm/dd/yyyy of completion) Game should be fully implemented/complete by this point
+  - [x] \(12/18/2021 of completion) Game should be fully implemented/complete by this point
 -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+- Direct Link: https://mtg24-prod.herokuapp.com/Project/game.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/64
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/146653507-ab2e0339-6b2f-47bf-a4a8-069d7a651a19.png)
+      - My Game has been done since Milestone 2. This is the main title screen.
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146658351-37b5798c-7603-4112-83ac-ab9d1c39205d.png)
+      - Flash message that states the players score will be saved if the player is logged in.
 
 
     - [ ] \(mm/dd/yyyy of completion)User’s score history will include pagination
@@ -381,14 +383,18 @@
       - PR link #1 (repeat as necessary)
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-  - [ ] \(mm/dd/yyyy of completion) Home page will have a weekly, monthly, and lifetime scoreboard
+  - [x] \(12/18/2021 of completion) Home page will have a weekly, monthly, and lifetime scoreboard
     -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/home.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
+      - PR Link #2: https://github.com/mgallo185/IT202-003/pull/73
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)        
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/146654863-6b5e55d0-e0e7-49c7-b294-c6b3b5c74b46.png)
+      - Screenshot 1 Description. Incoroporated this in Milestone 3. There are buttons to switch between a weekly, daily, monthly, and lifetime scoreboard. Currently the score board is for todays. 
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146658309-1c53e0a9-cbdb-43bb-b8b6-32ac19a793ba.png)
+      - Game link on nav heading and an example of how the scoreboard works.
 ### Intructions
 #### Don't delete this
 1. Pick one project type
