@@ -38,10 +38,10 @@ if (isset($_POST["save"]) && $isMe && $edit) {
         $hasError = true;
     }
     if (!$hasError) {
-        $params = [":email" => $email, ":username" => $username, ":id" => get_user_id()];
+        $params = [":email" => $email, ":username" => $username, ":id" => get_user_id(), ":vis" => $visibility];
         $db = getDB();
 
-        $stmt = $db->prepare("UPDATE Users set email = :email, username = :username where id = :id");
+        $stmt = $db->prepare("UPDATE Users set email = :email, username = :username, visibility = :vis  where id = :id");
         try {
             $stmt->execute($params);
         } catch (Exception $e) {
