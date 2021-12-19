@@ -333,15 +333,15 @@
         - Screenshot #2 description explaining what you're trying to show: Function Calc Winner Part 2.
  
 - Milestone 4
- - [ ] \(mm/dd/yyyy of completion) User can set their profile to be public or private
+ - [x] \(12/19/2021 of completion) User can set their profile to be public or private
  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Complete
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/105
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/146690917-732c81b7-8242-42f4-9e19-58e5d20cff2d.png)
+        - Screenshot #1 description explaining what you're trying to show: Button that enables a user to switch their profile to public
   - [ ] \(mm/dd/yyyy of completion) User will be able to see their competition history
 -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
@@ -369,14 +369,17 @@
       - PR link #1 (repeat as necessary)
     - Screenshots
       - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-  - [ ] \(mm/dd/yyyy of completion) Anywhere a username is displayed should be a link to that user’s profile
+  - [x] \(12/19/2021 of completion) Anywhere a username is displayed should be a link to that user’s profile
  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/home.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/105
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/146690749-eb1fbb2a-1d38-47e2-ad5c-a8e4566024c0.png)
+      - Screenshot of attempt to click on a private profile which results in a flash message stating that the profile is private.
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146690858-ab79ba76-076e-45b7-8cfb-ab0367a5f384.png)
+      - Screenshot of User JediMike seeing the public profile of 1sttest.
   - [ ] \(mm/dd/yyyy of completion) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
  -  List of Evidence of Feature Completion
     - Status: Pending (Completed, Partially working, Incomplete, Pending)
