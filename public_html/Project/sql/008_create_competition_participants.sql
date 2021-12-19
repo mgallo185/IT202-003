@@ -7,4 +7,5 @@ CREATE TABLE IF NOT EXISTS CompetitionParticipants(
     UNIQUE KEY (comp_id, user_id),
     FOREIGN KEY (comp_id) REFERENCES Competitions(id),
     FOREIGN KEY (user_id) REFERENCES Users(id)
+
 )

@@ -1,3 +1,4 @@
+
 CREATE TABLE IF NOT EXISTS PointsHistory
 (
   id   int auto_increment primary key,
@@ -10,4 +11,3 @@ CREATE TABLE IF NOT EXISTS PointsHistory
    
 
 )
-
