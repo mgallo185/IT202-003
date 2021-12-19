@@ -1,7 +1,8 @@
+
 <?php
 require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
-$payout_options = [];
+
 $db = getDB();
 $stmt = $db->prepare("SELECT id, CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM Competitions");
 try {
