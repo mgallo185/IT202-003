@@ -231,3 +231,4 @@ try {
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
+<?php include(__DIR__ . "/../../partials/pagination.php"); ?>

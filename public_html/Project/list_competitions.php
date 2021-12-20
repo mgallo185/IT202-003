@@ -14,7 +14,7 @@ $per_page = 5;
 paginate("SELECT count(1) as total FROM Competitions WHERE expires > current_timestamp() AND paid_out < 1 AND did_calc < 1");
 //handle page load
 //TODO fix join
-$stmt = $db->prepare("SELECT Competitions.id, title, min_participants, current_participants, current_reward, expires, creator_id, min_score, join_cost, IF(comp_id is null, 0, 1) as joined,  CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM Competitions
+$stmt = $db->prepare("SELECT Competitions.id, title, min_participants, current_participants, current_reward, expires, creator_id, min_score, join_fee, IF(comp_id is null, 0, 1) as joined,  CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM Competitions
 JOIN Competitons on Competitions.id = Competitons .payout_option
 LEFT JOIN (SELECT * FROM CompetitonParticipants WHERE user_id = :uid) as uc ON uc.competition_id = Competitions.id WHERE expires > current_timestamp() AND paid_out < 1 AND did_calc < 1 ORDER BY expires desc");
 /*$stmt = $db->prepare("SELECT BGD_Competitions.id, title, min_participants, current_participants, current_reward, expires, creator_id, min_score, join_cost, IF(competition_id is null, 0, 1) as joined,  CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM BGD_Competitions
@@ -74,3 +74,4 @@ try {
         </tbody>
     </table>
 </div>
+<?php include(__DIR__ . "/../../partials/pagination.php"); ?>
