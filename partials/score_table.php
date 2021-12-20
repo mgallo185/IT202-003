@@ -47,8 +47,12 @@ switch ($duration) {
                         <?php foreach ($results as $result) : ?>
                             <tr>
                                 <td>
-                                    <!--<a href="profile.php?id=<?php se($result, 'user_id'); ?>"><?php se($result, "username"); ?></a>-->
-                                    <?php se($result, "username"); ?>
+                                    <!--<a href="profile.php?id=<?php se($result, 'user_id'); ?>"><?php se($result, "username"); ?></a>--> 
+                                    <?php $user_id = se($result, "user_id", 0, false);
+                                    $username = se($result, "username", "", false);
+                                    include(__DIR__ . "/user_profile_link.php"); ?>
+
+
                                 </td>
                                 <td><?php se($result, "scoreState"); ?></td>
                                 <td><?php se($result, "created"); ?></td>

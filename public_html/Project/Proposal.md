@@ -171,7 +171,6 @@
 
                
 
-- Milestone 2
   - [x] \(11/16/2021 of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator
   -  List of Evidence of Feature Completion
     - Status: Completed
@@ -247,7 +246,6 @@
         - Screenshot #2: User points on profile page
 
 
-
   - [x] \(12/10/2021 of completion) Create a PointsHistory table (id, user_id, point_change, reason, created)
   -  List of Evidence of Feature Completion
     - Status: Complete
@@ -256,7 +254,7 @@
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/95/
     - Screenshots
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145664248-0237559f-e8e6-4e61-8d8d-9fe2981222e3.png)
-        - Screenshot #1 description: PointsHistory Table
+        - Screenshot #1 description: PointsHistory Table. 
 
 
   - [x] \(12/9/2021 of completion) Competitions table should have the following columns (id, name, created, duration, expires (now + duration), current_reward, starting_reward, join_fee, current_participants, min_participants, paid_out (boolean), min_score, first_place_per, second_place_per, third_place_per, cost_to_create, created, modified)
@@ -273,25 +271,27 @@
   - [ ] \(12/10/2021 of completion) User will be able to create a competition
   -  List of Evidence of Feature Completion
     - Status: Paritally Working 
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link:https://mtg24-prod.herokuapp.com/Project/create_competitions.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/96
     - Screenshots
       - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/145691819-421f39b1-54a2-41ad-92fc-d01b66daa094.png)
-        - Screenshot #1 description explaining what you're trying to show
+        - Screenshot #1 description explaining what you're trying to show: On this page, the user will be able to create a competition
+
+
   - [ ] \(12/10/2021 of completion)Each new participant causes the Reward value to increase by at least 1 or 50% of the joining fee rounded up
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Partially Working
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/create_competitions.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/96
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
-  - [ ] \(12/10/2021 of completion)Have a page where the User can see active competitions (not expired)
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/145698146-a4fd0c75-e6e7-4076-9bff-80cd57817c23.png)
+        - Screenshot #1 description explaining what you're trying to show: This function updates participants and increases the reward value by 50%
+  - [x] \(12/10/2021 of completion)Have a page where the User can see active competitions (not expired)
   -  List of Evidence of Feature Completion
     - Status: Partially Working 
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/list_competitions.php
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
@@ -307,27 +307,120 @@
     - Screenshots
       - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145692646-1d1eebf7-6fee-45bd-8555-b4b3a69101a9.png)
         - Screenshot #1 description: Table of Competition Participants
-    - [ ] \(12/10/2021 of completion) User can join active competitions 
+    - [x] \(12/10/2021 of completion) User can join active competitions 
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Complete
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/list_competitions.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: - PR link #1: https://github.com/mgallo185/IT202-003/pull/101
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/145697045-b46a4822-3e24-4d65-a1d6-a8a9cd687858.png)
+
+        - Screenshot #1 description explaining what you're trying to show: My function for the users to join active competitions
         - 
-  - [ ] \(12/10/2021 of completion) Create function that calculates competition winners
+  - [] \(12/10/2021 of completion) Create function that calculates competition winners
   -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Partially Working
+    - Direct Link:  https://mtg24-prod.herokuapp.com/Project/list_competitions.php
     - Pull Requests
-      - PR link #1 (repeat as necessary)
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/101
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
-        - Screenshot #1 description explaining what you're trying to show
+    - Screenshot #1: ![calc_winner1](https://user-images.githubusercontent.com/89924299/145696910-98546553-4c67-4d46-a884-1894f18bdb1a.PNG)
+
+    - Screenshot #1 description: Function Calc Winner Part 1
+      - Screenshot #2: ![calc_winner2](https://user-images.githubusercontent.com/89924299/145696889-c237c27d-9019-4562-8fc4-767b9e9236e1.png)
+
+        - Screenshot #2 description explaining what you're trying to show: Function Calc Winner Part 2.
  
 - Milestone 4
+ - [x] \(12/19/2021 of completion) User can set their profile to be public or private
+ -  List of Evidence of Feature Completion
+    - Status: Complete
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/105
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/146690917-732c81b7-8242-42f4-9e19-58e5d20cff2d.png)
+        - Screenshot #1 description explaining what you're trying to show: Button that enables a user to switch their profile to public
+  - [ ] \(mm/dd/yyyy of completion) User will be able to see their competition history
+-  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+
+ - [ ] \(mm/dd/yyyy of completion) User with the role of “admin” can edit a competition where paid_out = false
+ -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+
+
+  - [ ] \(mm/dd/yyyy of completion) Add pagination to the Active Competitions view
+ -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+  - [x] \(12/19/2021 of completion) Anywhere a username is displayed should be a link to that user’s profile
+ -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/home.php
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/105
+    - Screenshots
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/146690749-eb1fbb2a-1d38-47e2-ad5c-a8e4566024c0.png)
+      - Screenshot of attempt to click on a private profile which results in a flash message stating that the profile is private.
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146690858-ab79ba76-076e-45b7-8cfb-ab0367a5f384.png)
+      - Screenshot of User JediMike seeing the public profile of 1sttest.
+  - [ ] \(mm/dd/yyyy of completion) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
+ -  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+  - [x] \(12/18/2021 of completion) Game should be fully implemented/complete by this point
+-  List of Evidence of Feature Completion
+    - Status: Completed
+- Direct Link: https://mtg24-prod.herokuapp.com/Project/game.php
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/64
+    - Screenshots
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/146653507-ab2e0339-6b2f-47bf-a4a8-069d7a651a19.png)
+      - My Game has been done since Milestone 2. This is the main title screen.
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146658351-37b5798c-7603-4112-83ac-ab9d1c39205d.png)
+      - Flash message that states the players score will be saved if the player is logged in.
+
+
+    - [ ] \(mm/dd/yyyy of completion)User’s score history will include pagination
+-  List of Evidence of Feature Completion
+    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+  - [x] \(12/18/2021 of completion) Home page will have a weekly, monthly, and lifetime scoreboard
+    -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/home.php
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
+      - PR Link #2: https://github.com/mgallo185/IT202-003/pull/73
+    - Screenshots
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/146654863-6b5e55d0-e0e7-49c7-b294-c6b3b5c74b46.png)
+      - Screenshot 1 Description. Incoroporated this in Milestone 3. There are buttons to switch between a weekly, daily, monthly, and lifetime scoreboard. Currently the score board is for todays. 
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146658309-1c53e0a9-cbdb-43bb-b8b6-32ac19a793ba.png)
+      - Game link on nav heading and an example of how the scoreboard works.
 ### Intructions
 #### Don't delete this
 1. Pick one project type

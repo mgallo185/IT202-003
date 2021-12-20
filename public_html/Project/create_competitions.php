@@ -1,3 +1,4 @@
+
 <?php
 require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
@@ -15,7 +16,7 @@ try {
     error_log("Error Getting Places: " . var_export($e, true));
 }
 //save
-if (isset($_POST["title"]) && !empty($_POST["title"])) {
+ if (isset($_POST["title"]) && !empty($_POST["title"])) {
     $cost = (int)se($_POST, "starting_reward", 0, false);
     $cost++;
     $cost += (int)se($_POST, "join_fee", 0, false);
@@ -44,8 +45,9 @@ if (isset($_POST["title"]) && !empty($_POST["title"])) {
         flash("You can't afford this right now", "warning");
     }
 }
-?>
 
+
+?>
 <div class="container-fluid">
     <h1>Create Competition</h1>
     <form method="POST">
@@ -67,7 +69,7 @@ if (isset($_POST["title"]) && !empty($_POST["title"])) {
         </div>
         <div class="mb-3">
             <label for="jc" class="form-label">Join Cost</label>
-            <input id="jc" name="join_fee" type="number" class="form-control" onchange="updateCost()" placeholder=">= 0" min="0" />
+            <input id="jc" name="join_cost" type="number" class="form-control" onchange="updateCost()" placeholder=">= 0" min="0" />
         </div>
         <div class="mb-3">
             <label for="duration" class="form-label">Duration (in Days)</label>
@@ -96,3 +98,7 @@ if (isset($_POST["title"]) && !empty($_POST["title"])) {
             document.querySelector("[type=submit]").value = `Create Competition (Cost: ${cost})`;
         }
     </script>
+</div>
+<?php
+require(__DIR__ . "/../../partials/flash.php");
+?>
