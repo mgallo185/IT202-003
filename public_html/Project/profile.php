@@ -143,7 +143,6 @@ try {
     </div>
     <div>
         <?php $scores = get_latest_scores($user_id);
-        paginate($scores . $score);
         ?>
         
         <h3>Score History</h3>
@@ -234,3 +233,4 @@ try {
 <?php
 require_once(__DIR__ . "/../../partials/flash.php");
 ?>
+<?php include(__DIR__ . "/../../partials/pagination.php"); ?>
