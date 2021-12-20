@@ -10,13 +10,13 @@ switch ($duration) {
     case "daily":
         $title = "Top Scores Today";
         break;
-    case "weekly":
+    case "week":
         $title = "Top Scores This Week";
         break;
-    case "monthly":
+    case "month":
         $title = "Top Scores This Month";
         break;
-    case "lifetimely":
+    case "lifetime":
         $title = "All Time Top Scores";
         break;
     default:
