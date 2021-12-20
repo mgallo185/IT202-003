@@ -153,9 +153,9 @@ function save_score($score, $user_id, $showFlash = false)
     }
 }
 
-function get_top_10($duration = "day")
+function get_top_10($duration = "daily")
 {
-    $d = "day";
+    $d = "daily";
     if (in_array($duration, ["day", "week", "month", "lifetime"])) {
         //variable is safe
         $d = $duration;
@@ -280,7 +280,7 @@ function get_user()
 
 
 
-function change_points($points, $reason,$id)
+function change_points($id, $points, $reason)
 {
     //I'm choosing to ignore the record of 0 point transactions
     if ($points > 0) {
