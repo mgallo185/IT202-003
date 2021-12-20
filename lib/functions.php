@@ -202,7 +202,7 @@ function get_best_score($user_id)
 
 function get_user_points()
 {
-    if (is_logged_in() && isset($_SESSION["user"])) {
+    if (is_logged_in() && isset($_SESSION["user"]["points"])) {
         return (int)se($_SESSION["user"], "points", 0, false);
     }
     return 0;
