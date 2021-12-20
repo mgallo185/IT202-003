@@ -78,9 +78,10 @@ try {
         <div class="mb-3">
             <label for="po" class="form-label">Payout Option</label>
             <select id="po" name="payout_option" class="form-control">
-                <?php foreach ($payout_options as $po) : ?>
-                    <option value="<?php se($po, 'id'); ?>"><?php se($po, 'place'); ?></option>
-                <?php endforeach; ?>
+            <option value="1">100% to First</option>
+                <option value="2">80% to First, 20% to Second</option>
+                <option value="3">70% to First, 20% to Second, 10% to Third</option>
+                <option value="4">60% to First, 30% to Second, 10% to Third</option>
             </select>
         </div>
         <div class="mb-3">
