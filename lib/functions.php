@@ -153,9 +153,9 @@ function save_score($score, $user_id, $showFlash = false)
     }
 }
 
-function get_top_10($duration = "day")
+function get_top_10($duration = "daily")
 {
-    $d = "day";
+    $d = "daily";
     if (in_array($duration, ["daily", "weekly", "monthly", "lifetimely"])) {
         //variable is safe
         $d = $duration;

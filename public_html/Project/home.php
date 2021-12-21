@@ -23,7 +23,7 @@ require(__DIR__ . "/../../partials/nav.php");
 if(isset($_POST["time"])){
 $duration = $_POST["time"];
 } else{
-    $duration = "day";
+    $duration = "daily";
 }
 
 ?>
