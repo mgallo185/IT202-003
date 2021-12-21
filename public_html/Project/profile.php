@@ -143,6 +143,7 @@ try {
     </div>
     <div>
         <?php $scores = get_latest_scores($user_id);
+        paginate($scores . $score);
         ?>
         
         <h3>Score History</h3>
