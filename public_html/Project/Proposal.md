@@ -335,7 +335,7 @@
 - Milestone 4
  - [x] \(12/19/2021 of completion) User can set their profile to be public or private
  -  List of Evidence of Feature Completion
-    - Status: Complete
+    - Status: Completed
     - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
     - Pull Requests
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/105
@@ -417,8 +417,8 @@
       - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
       - PR Link #2: https://github.com/mgallo185/IT202-003/pull/73
     - Screenshots
-      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/146654863-6b5e55d0-e0e7-49c7-b294-c6b3b5c74b46.png)
-      - Screenshot 1 Description. Incoroporated this in Milestone 3. There are buttons to switch between a weekly, daily, monthly, and lifetime scoreboard. Currently the score board is for todays. 
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/147008933-8c0d253e-b88f-46fd-a947-e9c231abb76b.png)
+      - Screenshot 1 Description. Incoroporated this in Milestone 3. There are buttons to switch between a weekly, daily, monthly, and lifetime scoreboard. Currently the score board is for monthly. 
       - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146658309-1c53e0a9-cbdb-43bb-b8b6-32ac19a793ba.png)
       - Game link on nav heading and an example of how the scoreboard works.
 ### Intructions
