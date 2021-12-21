@@ -155,8 +155,8 @@ function save_score($score, $user_id, $showFlash = false)
 
 function get_top_10($duration = "day")
 {
-    $d = "daily";
-    if (in_array($duration, ["day", "week", "month", "lifetime"])) {
+    $d = "day";
+    if (in_array($duration, ["daily", "weekly", "monthly", "lifetimely"])) {
         //variable is safe
         $d = $duration;
     }
