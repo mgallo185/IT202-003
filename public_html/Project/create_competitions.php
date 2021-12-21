@@ -4,7 +4,11 @@ require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
 $payout_options = [];
 $db = getDB();
-$stmt = $db->prepare("SELECT id, CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM Competitions");
+$stmt = $db->prepare(     "INSERT INTO Competitions (title, duration, expires, starting_reward, current_reward, join_fee, min_participants, current_participants, paid_out, min_score, first_place, second_place, third_place, cost_to_create, payout_option, did_calc , creator_id )
+
+VALUES (:title, :duration, :expires, :starting_reward, :current_reward. :join_fee, :min_participants, :current_participants, :paid_out :min_score, :first_place, :second_place, :third_place, :cost_to_create, 
+((DATE_ADD(CURRENT_TIMESTAMP, INTERVAL :duration DAY))), :starting_reward, 1, false);"
+);
 try {
     $stmt->execute();
     $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -17,9 +21,7 @@ try {
 }
 //save
  if (isset($_POST["title"]) && !empty($_POST["title"])) {
-    $cost = (int)se($_POST, "starting_reward", 0, false);
-    $cost++;
-    $cost += (int)se($_POST, "join_fee", 0, false);
+    $cost = $_POST["starting_reward"];
     $title = se($_POST, "title", "N/A", false);
     $balance = get_user_points();
     if ($balance >= $cost) {
@@ -78,10 +80,9 @@ try {
         <div class="mb-3">
             <label for="po" class="form-label">Payout Option</label>
             <select id="po" name="payout_option" class="form-control">
-            <option value="1">100% to First</option>
-                <option value="2">80% to First, 20% to Second</option>
-                <option value="3">70% to First, 20% to Second, 10% to Third</option>
-                <option value="4">60% to First, 30% to Second, 10% to Third</option>
+                <?php foreach ($payout_options as $po) : ?>
+                    <option value="<?php se($po, 'id'); ?>"><?php se($po, 'place'); ?></option>
+                <?php endforeach; ?>
             </select>
         </div>
         <div class="mb-3">

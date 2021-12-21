@@ -33,6 +33,7 @@ $response =["message" => "Testing "];
         $user_id = get_user_id();
         $score = (int)se($data, "score", 0, false);
         save_score($score, $user_id, true);
+        change_points($user_id, $score, "earned same point as game score");
         $response["message"] = "score Saved";
         error_log("score successful!");
         http_response_code(200);
