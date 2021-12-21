@@ -5,10 +5,10 @@ require(__DIR__ . "/../../partials/nav.php");
 
 <form method= "POST" action = "home.php">
 
-<input type = "submit" name="time" class = "navbar-nav me-auto mb-2 mb-lg-0" value= "daily" />
-<input type = "submit" name="time" class = "navbar-nav me-auto mb-2 mb-lg-0" value= "weekly" />
-<input type = "submit" name="time" class = "navbar-nav me-auto mb-2 mb-lg-0" value= "monthly" />
-<input type = "submit" name="time" class = "navbar-nav me-auto mb-2 mb-lg-0" value= "lifetimely" />
+<input type = "submit" name="time" class = "navbar-nav me-auto mb-2 mb-lg-0" value= "day" />
+<input type = "submit" name="time" class = "navbar-nav me-auto mb-2 mb-lg-0" value= "week" />
+<input type = "submit" name="time" class = "navbar-nav me-auto mb-2 mb-lg-0" value= "month" />
+<input type = "submit" name="time" class = "navbar-nav me-auto mb-2 mb-lg-0" value= "lifetime" />
 <input type="submit" name="game" class="mt-3 btn btn-success" value="Play Game" action = "game.php" />
 
 </form> 
