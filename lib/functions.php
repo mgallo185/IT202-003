@@ -153,10 +153,10 @@ function save_score($score, $user_id, $showFlash = false)
     }
 }
 
-function get_top_10($duration = "daily")
+function get_top_10($duration = "day")
 {
-    $d = "daily";
-    if (in_array($duration, ["daily", "weekly", "monthly", "lifetimely"])) {
+    $d = "day";
+    if (in_array($duration, ["day", "week", "month", "lifetime"])) {
         //variable is safe
         $d = $duration;
     }
