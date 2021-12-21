@@ -69,6 +69,7 @@ require_once(__DIR__ . "/../lib/functions.php");
                         <ul class="dropdown-menu bg-warning" aria-labelledby="rolesDropdown">
                             <li><a class="dropdown-item" href="<?php echo get_url('create_competitions.php'); ?>">Create</a></li>
                             <li><a class="dropdown-item" href="<?php echo get_url('list_competitions.php'); ?>">Active</a></li>
+                            <li><a class="dropdown-item" href="<?php echo get_url('competition_history.php'); ?>">History</a></li>
                         </ul>
                     </li>
                 <?php endif; ?>
