@@ -142,9 +142,8 @@ try {
         Points: <?php echo get_user_points(); ?>
     </div>
     <div>
-        <?php $scores = get_latest_scores($user_id);
-        ?>
-        
+
+        <?php $scores = get_latest_scores($user_id); ?>
         <h3>Score History</h3>
         <table class="table text-light">
             <thead>
