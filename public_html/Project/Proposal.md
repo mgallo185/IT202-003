@@ -367,7 +367,8 @@
   - [ ] \(mm/dd/yyyy of completion) Add pagination to the Active Competitions view
  -  List of Evidence of Feature Completion
     - Status: Partially Working
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/list_competitions.php
+    
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
