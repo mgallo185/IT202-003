@@ -344,16 +344,19 @@
         - Screenshot #1 description explaining what you're trying to show: Button that enables a user to switch their profile to public
   - [ ] \(mm/dd/yyyy of completion) User will be able to see their competition history
 -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Incomplete
+    - Attempt at competititons history, but even if it worked. I cannnot test it because of issue of Points and Create Competitions 
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/147023890-0ea7a305-3a15-4020-8ffa-ea4f5573ad65.png)
+
 
  - [ ] \(mm/dd/yyyy of completion) User with the role of “admin” can edit a competition where paid_out = false
  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Incomplete
+    - I could not figure out how to approach this step.
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
@@ -363,12 +366,15 @@
 
   - [ ] \(mm/dd/yyyy of completion) Add pagination to the Active Competitions view
  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Partially Working
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1 : ![image](https://user-images.githubusercontent.com/89924299/147023560-e1aa3fad-db92-41bf-8b9d-5b4cb83096e2.png)
+      - Pagination appears on List Competions, but I cannot test it 
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/147023671-be5f6b2a-d8b9-43ea-ad7f-4db9c34f9781.png)
+      - Paginate function is called in list competitions.
   - [x] \(12/19/2021 of completion) Anywhere a username is displayed should be a link to that user’s profile
  -  List of Evidence of Feature Completion
     - Status: Completed
@@ -382,7 +388,7 @@
       - Screenshot of User JediMike seeing the public profile of 1sttest.
   - [ ] \(mm/dd/yyyy of completion) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
  -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
+    - Status: Incomplete
     - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
     - Pull Requests
       - PR link #1 (repeat as necessary)
@@ -403,12 +409,12 @@
 
     - [ ] \(mm/dd/yyyy of completion)User’s score history will include pagination
 -  List of Evidence of Feature Completion
-    - Status: Pending (Completed, Partially working, Incomplete, Pending)
-    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Status: Partially working
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
     - Pull Requests
       - PR link #1 (repeat as necessary)
     - Screenshots
-      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/147021621-ade2f075-20b9-4604-9813-bebd7ead8dda.png)
   - [x] \(12/18/2021 of completion) Home page will have a weekly, monthly, and lifetime scoreboard
     -  List of Evidence of Feature Completion
     - Status: Completed
