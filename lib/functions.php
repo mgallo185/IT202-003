@@ -153,10 +153,10 @@ function save_score($score, $user_id, $showFlash = false)
     }
 }
 
-function get_top_10($duration = "day")
+function get_top_10($duration = "daily")
 {
-    $d = "day";
-    if (in_array($duration, ["day", "week", "month", "lifetime"])) {
+    $d = "daily";
+    if (in_array($duration, ["day", "weekly", "monthly", "lifetimely"])) {
         //variable is safe
         $d = $duration;
     }
@@ -200,22 +200,12 @@ function get_best_score($user_id)
     return 0;
 }
 
-function get_user_points($user_id)
+function get_user_points()
 {
-  $query = "SELECT points from Users WHERE id = ;id";
-  $db = getDB();
-  $stmt = $db-> prepare($query);
-  try{
-      $stmt-> execute([":id" => $user_id]);
-      $r = $stmt->fetch(PDO::FETCH_ASSOC);
-      if($r){
-          return(int)se($r, "points", 0, false);
-      }
-  } catch (PDOException $e){
-      error_log("error fetching points for user $user_id: " . var_export($e->errorInfo,true));
-
-  }
-  return 0;
+    if (is_logged_in() && isset($_SESSION["user"]["points"])) {
+        return (int)se($_SESSION["user"], "points", 0, false);
+    }
+    return 0;
 }
 
 function get_latest_scores($user_id, $limit = 10)
@@ -307,13 +297,10 @@ function change_points($points, $reason,$id)
         error_log("Transfering");
         try {
             $stmt->execute($params);
-           {
-               if(is_logged_in()) {
-                   refresh_user_points();
-               }
-           }
+            error_log("transaction complete");
+            return true;
         } catch (PDOException $e) {
-        
+            error_log(var_export($e->errorInfo, true));
             flash("Transfer error occurred: " . var_export($e->errorInfo, true), "danger");
         }
         return false;
@@ -341,7 +328,7 @@ function update_participants($comp_id)
 
 function join_competition($comp_id, $user_id, $cost)
 {
-    $balance = get_user_points($user_id);
+    $balance = get_user_points();
     if ($comp_id > 0) {
         if ($balance >= $cost) {
             $db = getDB();
