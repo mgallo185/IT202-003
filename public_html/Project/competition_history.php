@@ -12,7 +12,7 @@ if (isset($_POST["join"])) {
 $id = se($_GET, "id", -1, false);
 if ($id < 1) {
     flash("Invalid competition", "danger");
-    redirect("list_competitions.php");
+    redirect("competition_history.php");
 }
 //handle page load
 $stmt = $db->prepare(
