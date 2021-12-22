@@ -171,7 +171,6 @@
 
                
 
-- Milestone 2
   - [x] \(11/16/2021 of completion) Pick a simple game to implement, anything that generates a score that’s more advanced than a simple random number generator
   -  List of Evidence of Feature Completion
     - Status: Completed
@@ -334,6 +333,100 @@
         - Screenshot #2 description explaining what you're trying to show: Function Calc Winner Part 2.
  
 - Milestone 4
+ - [x] \(12/19/2021 of completion) User can set their profile to be public or private
+ -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/105
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/89924299/146690917-732c81b7-8242-42f4-9e19-58e5d20cff2d.png)
+        - Screenshot #1 description explaining what you're trying to show: Button that enables a user to switch their profile to public
+  - [ ] \(mm/dd/yyyy of completion) User will be able to see their competition history
+-  List of Evidence of Feature Completion
+    - Status: Incomplete
+    - Attempt at competititons history, but even if it worked. I cannnot test it because of issue of Points and Create Competitions 
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/147023890-0ea7a305-3a15-4020-8ffa-ea4f5573ad65.png)
+
+
+ - [ ] \(mm/dd/yyyy of completion) User with the role of “admin” can edit a competition where paid_out = false
+ -  List of Evidence of Feature Completion
+    - Status: Incomplete
+    - I could not figure out how to approach this step.
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+
+
+  - [ ] \(mm/dd/yyyy of completion) Add pagination to the Active Competitions view
+ -  List of Evidence of Feature Completion
+    - Status: Partially Working
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 : ![image](https://user-images.githubusercontent.com/89924299/147023560-e1aa3fad-db92-41bf-8b9d-5b4cb83096e2.png)
+      - Pagination appears on List Competions, but I cannot test it 
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/147023671-be5f6b2a-d8b9-43ea-ad7f-4db9c34f9781.png)
+      - Paginate function is called in list competitions.
+  - [x] \(12/19/2021 of completion) Anywhere a username is displayed should be a link to that user’s profile
+ -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/home.php
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/105
+    - Screenshots
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/146690749-eb1fbb2a-1d38-47e2-ad5c-a8e4566024c0.png)
+      - Screenshot of attempt to click on a private profile which results in a flash message stating that the profile is private.
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146690858-ab79ba76-076e-45b7-8cfb-ab0367a5f384.png)
+      - Screenshot of User JediMike seeing the public profile of 1sttest.
+  - [ ] \(mm/dd/yyyy of completion) Viewing an active or expired competition should show the top 10 scoreboard related to that competition
+ -  List of Evidence of Feature Completion
+    - Status: Incomplete
+    - Direct Link: (Direct link to the file or files in heroku prod for quick testing (even if it's a protected page))
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1 (paste the image so it uploads to github) (repeat as necessary)
+  - [x] \(12/18/2021 of completion) Game should be fully implemented/complete by this point
+-  List of Evidence of Feature Completion
+    - Status: Completed
+- Direct Link: https://mtg24-prod.herokuapp.com/Project/game.php
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/64
+    - Screenshots
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/146653507-ab2e0339-6b2f-47bf-a4a8-069d7a651a19.png)
+      - My Game has been done since Milestone 2. This is the main title screen.
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146658351-37b5798c-7603-4112-83ac-ab9d1c39205d.png)
+      - Flash message that states the players score will be saved if the player is logged in.
+
+
+    - [ ] \(mm/dd/yyyy of completion)User’s score history will include pagination
+-  List of Evidence of Feature Completion
+    - Status: Partially working
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/profile.php
+    - Pull Requests
+      - PR link #1 (repeat as necessary)
+    - Screenshots
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/147021621-ade2f075-20b9-4604-9813-bebd7ead8dda.png)
+  - [x] \(12/18/2021 of completion) Home page will have a weekly, monthly, and lifetime scoreboard
+    -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://mtg24-prod.herokuapp.com/Project/home.php
+    - Pull Requests
+      - PR link #1: https://github.com/mgallo185/IT202-003/pull/69
+      - PR Link #2: https://github.com/mgallo185/IT202-003/pull/73
+    - Screenshots
+      - Screenshot #1: ![image](https://user-images.githubusercontent.com/89924299/147008933-8c0d253e-b88f-46fd-a947-e9c231abb76b.png)
+      - Screenshot 1 Description. Incoroporated this in Milestone 3. There are buttons to switch between a weekly, daily, monthly, and lifetime scoreboard. Currently the score board is for monthly. 
+      - Screenshot #2: ![image](https://user-images.githubusercontent.com/89924299/146658309-1c53e0a9-cbdb-43bb-b8b6-32ac19a793ba.png)
+      - Game link on nav heading and an example of how the scoreboard works.
 ### Intructions
 #### Don't delete this
 1. Pick one project type

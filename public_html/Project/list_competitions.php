@@ -1,6 +1,7 @@
 <?php
 require_once(__DIR__ . "/../../partials/nav.php");
 is_logged_in(true);
+$payout_options = [];
 $db = getDB();
 //handle join
 if (isset($_POST["join"])) {
@@ -14,9 +15,11 @@ $per_page = 5;
 paginate("SELECT count(1) as total FROM Competitions WHERE expires > current_timestamp() AND paid_out < 1 AND did_calc < 1");
 //handle page load
 //TODO fix join
-$stmt = $db->prepare("SELECT Competitions.id, title, min_participants, current_participants, current_reward, expires, creator_id, min_score, join_cost, IF(comp_id is null, 0, 1) as joined,  CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM Competitions
+$stmt = $db->prepare("SELECT Competitions.id, title, min_participants, current_participants, current_reward, expires, creator_id, min_score, join_fee, IF(comp_id is null, 0, 1) as joined,  CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM Competitions
+
 JOIN Competitons on Competitions.id = Competitons .payout_option
 LEFT JOIN (SELECT * FROM CompetitonParticipants WHERE user_id = :uid) as uc ON uc.competition_id = Competitions.id WHERE expires > current_timestamp() AND paid_out < 1 AND did_calc < 1 ORDER BY expires desc");
+
 /*$stmt = $db->prepare("SELECT BGD_Competitions.id, title, min_participants, current_participants, current_reward, expires, creator_id, min_score, join_cost, IF(competition_id is null, 0, 1) as joined,  CONCAT(first_place,'% - ', second_place, '% - ', third_place, '%') as place FROM BGD_Competitions
 JOIN BGD_Payout_Options on BGD_Payout_Options.id = BGD_Competitions.payout_option
 LEFT JOIN BGD_UserComps on BGD_UserComps.competition_id = BGD_Competitions.id WHERE user_id = :uid AND expires > current_timestamp() AND did_payout < 1 AND did_calc < 1 ORDER BY expires desc");*/
@@ -58,8 +61,8 @@ try {
                             <?php else : ?>
                                 <form method="POST">
                                     <input type="hidden" name="comp_id" value="<?php se($row, 'id'); ?>" />
-                                    <input type="hidden" name="cost" value="<?php se($row, 'join_cost', 0); ?>" />
-                                    <input type="submit" name="join" class="btn btn-primary" value="Join (Cost: <?php se($row, "join_cost", 0) ?>)" />
+                                    <input type="hidden" name="cost" value="<?php se($row, 'join_fee', 0); ?>" />
+                                    <input type="submit" name="join" class="btn btn-primary" value="Join (Cost: <?php se($row, "join_fee", 0) ?>)" />
                                 </form>
                             <?php endif; ?>
                             <a class="btn btn-secondary" href="view_competition.php?id=<?php se($row, 'id'); ?>">View</a>
@@ -73,4 +76,8 @@ try {
             <?php endif; ?>
         </tbody>
     </table>
+<?php include(__DIR__ . "/../../partials/pagination.php"); ?>
+
 </div>
+
+
