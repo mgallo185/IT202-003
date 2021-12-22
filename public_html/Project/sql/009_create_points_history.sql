@@ -8,6 +8,6 @@ CREATE TABLE IF NOT EXISTS PointsHistory
 
     created   timestamp default current_timestamp,
     modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-   
+    FOREIGN KEY (user_id) REFERENCES Users(id)
 
 )
