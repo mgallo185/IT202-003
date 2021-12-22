@@ -1,11 +1,8 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
 
-
  ?>
 
-
-?>
   <style>
 
 #canvas {
@@ -17,6 +14,7 @@ require(__DIR__ . "/../../partials/nav.php");
     </style>
 </head>
     <h1>Shooter Arcade</h1>
+    <h2?> Make sure you're logged in if you aren't</h2>
     <div id="center">
         <canvas id="canvas" width="600" height="400" tabindex="1"></canvas>
     </div>
