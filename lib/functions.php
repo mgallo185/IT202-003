@@ -200,12 +200,22 @@ function get_best_score($user_id)
     return 0;
 }
 
-function get_user_points()
+function get_user_points($user_id)
 {
-    if (is_logged_in() && isset($_SESSION["user"]["points"])) {
-        return (int)se($_SESSION["user"], "points", 0, false);
-    }
-    return 0;
+  $query = "SELECT points from Users WHERE id = ;id";
+  $db = getDB();
+  $stmt = $db-> prepare($query);
+  try{
+      $stmt-> execute([":id" => $user_id]);
+      $r = $stmt->fetch(PDO::FETCH_ASSOC);
+      if($r){
+          return(int)se($r, "points", 0, false);
+      }
+  } catch (PDOException $e){
+      error_log("error fetching points for user $user_id: " . var_export($e->errorInfo,true));
+
+  }
+  return 0;
 }
 
 function get_latest_scores($user_id, $limit = 10)
@@ -297,10 +307,13 @@ function change_points($points, $reason,$id)
         error_log("Transfering");
         try {
             $stmt->execute($params);
-            error_log("transaction complete");
-            return true;
+           {
+               if(is_logged_in()) {
+                   refresh_user_points();
+               }
+           }
         } catch (PDOException $e) {
-            error_log(var_export($e->errorInfo, true));
+        
             flash("Transfer error occurred: " . var_export($e->errorInfo, true), "danger");
         }
         return false;
@@ -328,7 +341,7 @@ function update_participants($comp_id)
 
 function join_competition($comp_id, $user_id, $cost)
 {
-    $balance = get_user_points();
+    $balance = get_user_points($user_id);
     if ($comp_id > 0) {
         if ($balance >= $cost) {
             $db = getDB();
