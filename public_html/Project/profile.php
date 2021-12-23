@@ -139,7 +139,7 @@ try {
     </div>
 
     <div>
-        Points: <?php echo get_user_points(); ?>
+        Points: <?php echo get_points($user_id); ?>
     </div>
     <div>
 

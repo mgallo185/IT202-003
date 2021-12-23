@@ -200,13 +200,6 @@ function get_best_score($user_id)
     return 0;
 }
 
-function get_user_points()
-{
-    if (is_logged_in() && isset($_SESSION["user"]["points"])) {
-        return (int)se($_SESSION["user"], "points", 0, false);
-    }
-    return 0;
-}
 
 function get_latest_scores($user_id, $limit = 10)
 {
@@ -249,65 +242,59 @@ function refresh_user_points()
     }
 }
 
-function get_user()
-{
 
-    if (is_logged_in()) {
-        //let's define our data structure first
-        //id is for internal references, account_number is user facing info, and balance will be a cached value of activity
-        $user = ["id" => -1, "points" =>0];
-        //this should always be 0 or 1, but being safe
-        $query = "SELECT id, points from Users where id = :uid LIMIT 1";
-        $db = getDB();
-        $stmt = $db->prepare($query);
-        try {
-            $stmt->execute([":uid" => get_user_id()]);
-            $result = $stmt->fetch(PDO::FETCH_ASSOC);
-            $user = $result;
-            $user["id"] = $result["id"];
-            $user["points"] =$result["points"];
+function change_points($user_id, $points, $reason)
 
-        } catch (PDOException $e) {
-            flash("Technical error: " . var_export($e-> errorInfo. true), "danger" );
-        }
-        $_SESSION["user"]["points"] = $user;
-    } else {
-        flash( "You're not logged in", "danger");
-    }
-           
-}
-    
-
-
-
-function change_points($points, $reason,$id)
 {
     //I'm choosing to ignore the record of 0 point transactions
     if ($points > 0) {
         $query = "INSERT INTO PointsHistory (user_id, point_change, reason) 
-            VALUES (:uid, :pc, :r)";
+            VALUES (:userid, :pc, :r)";
     
         //I'll insert both records at once, note the placeholders kept the same and the ones changed.
-         $params[":r"] = $reason;
-        $params[":pc"] = ($points);
-        $params[":uid"] = ($id);
+        $params[":userid"] = $user_id;
+        $params[":pc"] = $points;
+        $params[":r"] = $reason;
 
         $db = getDB();
         $stmt = $db->prepare($query);
         error_log("Transfering");
         try {
             $stmt->execute($params);
-            error_log("transaction complete");
-            return true;
-        } catch (PDOException $e) {
+            {
+                if (is_logged_in()) {
+                        refresh_user_points();
+                    }
+                }
+
+            
+            } catch (PDOException $e) {
+                
             error_log(var_export($e->errorInfo, true));
             flash("Transfer error occurred: " . var_export($e->errorInfo, true), "danger");
         }
-        return false;
+       
     }
 }
 
+function get_points($user_id)
+{
+    
+    $query = "SELECT points from Users WHERE id = :id";
+    $db = getDB();
+    $stmt = $db->prepare($query);
+    try {
+        $stmt->execute([":id" => $user_id]);
+        $r = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($r) {
+            return (int)se($r, "points", 0, false);
+        }
+    } catch (PDOException $e) {
+        error_log("Error fetching points for user $user_id: " . var_export($e->errorInfo, true));
+    }
+    return 0;
 
+}
 
 
 
@@ -326,41 +313,47 @@ function update_participants($comp_id)
 }
 
 
-function join_competition($comp_id, $user_id, $cost)
+function join_competition($comp_id, $user_id, $isCreator = false)
 {
-    $balance = get_user_points();
-    if ($comp_id > 0) {
-        if ($balance >= $cost) {
-            $db = getDB();
-            $stmt = $db->prepare("SELECT title, join_fee from Competitions where id = :id");
-            try {
-                $stmt->execute([":id" => $comp_id]);
-                $r = $stmt->fetch(PDO::FETCH_ASSOC);
-                if ($r) {
-                    $cost = (int)se($r, "join_fee", 0, false);
-                    $name = se($r, "title", "", false);
-                    if ($balance >= $cost) {
-                        if (change_points($cost, "join-comp", get_user_id(), -1, "Joining competition $name")) {
-                            if (add_to_competition($comp_id, $user_id)) {
-                                flash("Successfully joined $name", "success");
-                            }
-                        } else {
-                            flash("Failed to pay for competition", "danger");
-                        }
-                    } else {
-                        flash("You can't afford to join this competition", "warning");
-                    }
-                }
-            } catch (PDOException $e) {
-                error_log("Comp lookup error " . var_export($e, true));
-                flash("There was an error looking up the competition", "danger");
-            }
-        } else {
-            flash("You can't afford to join this competition", "warning");
-        }
-    } else {
-        flash("Invalid competition, please try again", "danger");
+    $db = getDB();
+    
+    $query = "SELECT join_fee FROM CompetitionParticipants WHERE comp_id = :cid";
+    $stmt = $db->prepare($query);
+    try {
+        $stmt->execute([":cid"=>$comp_id]);
+        $join_fee = $stmt->fetchAll();
     }
+    catch (PDOException $e) {
+        error_log("Error fetching join_fee: " . var_export($e, true));
+    }
+
+    $stmt = $db->prepare("INSERT INTO CompetitionParticipants (user_id, comp_id) VALUES (:uid, :cid)");
+    $joined = false;
+    try {
+        $stmt->execute([":uid" => $user_id, ":cid" => $comp_id]);
+        update_participants($comp_id);
+        $joined = true;
+        return true;
+    } catch (PDOException $e) {
+        error_log("Join Competition error: " . var_export($e, true));
+    }
+    
+    if ($joined) {
+        $query = "UPDATE Competitions set current_participants = (SELECT count(1) from CompetitionParticipants where comp_id = :cid),
+        current_reward = current_reward + 1 WHERE id = :uid";
+        $stmt = $db->prepare($query);
+        try {
+            $stmt->execute([":cid"=>$comp_id]);
+        }
+        catch (PDOException $e) {
+            error_log("error updating comp stats." . var_export($e->errorInfo, true));
+        }
+    }
+    if (!$isCreator) {
+        $join_fee = 0;
+    }
+    change_points($user_id, -$join_fee, "Joined-comp", true);
+    return false;
 }
 
 function add_to_competition($comp_id, $user_id)
