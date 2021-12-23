@@ -69,12 +69,12 @@ if (isset($_POST["title"])) {
     if ($isValid) {
         //now create comp and deduct cost from user points
         $db = getDB();
-        $query = "INSERT INTO Competitions (title, min_participants, current_participants, join_fee, starting_reward, current_reward, duration, creator_id, min_score, first_place_per, second_place_per, third_place_per, cost,  expires)
+        $query = "INSERT INTO Competitions (title, min_participants, current_participants, join_fee, starting_reward, current_reward, duration, creator_id, min_score, first_place, second_place, third_place, cost_to_create,  expires)
         values (:n, :mp,1,  :jf, :sr,:sr, :d, :cid, :ms, :fp, :sp, :tp, :c, DATE_ADD(NOW(), INTERVAL $duration day))";
         $stmt = $db->prepare($query);
         try {
             $stmt->execute([
-                ":n" => $name,
+                ":n" => $title,
                 ":cid" => get_user_id(),
                 ":sr" => $starting_reward,
                 ":d" => $duration,
